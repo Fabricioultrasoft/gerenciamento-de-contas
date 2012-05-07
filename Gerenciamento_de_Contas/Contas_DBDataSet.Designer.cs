@@ -3806,7 +3806,7 @@ SELECT id, credor, descricao, valor, data_emissao, data_vencimento, data_pagamen
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[8];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, credor, descricao, valor, data_emissao, data_vencimento, data_pagament" +
@@ -3830,16 +3830,39 @@ SELECT id, credor, descricao, valor, data_emissao, data_vencimento, data_pagamen
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@credor", global::System.Data.SqlDbType.VarChar, 250, global::System.Data.ParameterDirection.Input, 0, 0, "credor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "SELECT        id, credor, descricao, valor, data_emissao, data_vencimento, data_p" +
+            this._commandCollection[3].CommandText = @"SELECT        id, credor, descricao, valor, data_emissao, data_vencimento, data_pagamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao
+FROM            Contas_Pagar
+WHERE        (CAST(data_vencimento AS varchar(10)) LIKE '%' + @vencimento)";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@vencimento", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "SELECT        id, credor, descricao, valor, data_emissao, data_vencimento, data_p" +
+                "agamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao" +
+                "\r\nFROM            Contas_Pagar\r\nWHERE        (forma_pagamento LIKE \'%\' + @forma " +
+                "+ \'%\')";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@forma", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "forma_pagamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "SELECT        id, credor, descricao, valor, data_emissao, data_vencimento, data_p" +
+                "agamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao" +
+                "\r\nFROM            Contas_Pagar\r\nWHERE        (situacao LIKE \'%\' + @situacao + \'%" +
+                "\')";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@situacao", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "situacao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "SELECT        id, credor, descricao, valor, data_emissao, data_vencimento, data_p" +
                 "agamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao" +
                 "\r\nFROM            Contas_Pagar\r\nWHERE        (CAST(valor AS varchar(20)) LIKE \'%" +
                 "\' + @valor)";
-            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valor", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "SELECT        MAX(id) AS Expr1\r\nFROM            Contas_Pagar";
-            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valor", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[7].Connection = this.Connection;
+            this._commandCollection[7].CommandText = "SELECT        MAX(id) AS Expr1\r\nFROM            Contas_Pagar";
+            this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3942,8 +3965,116 @@ SELECT id, credor, descricao, valor, data_emissao, data_vencimento, data_pagamen
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByPesquisaValor(Contas_DBDataSet.Contas_PagarDataTable dataTable, string valor) {
+        public virtual int FillByPesquisaDataVencimento(Contas_DBDataSet.Contas_PagarDataTable dataTable, string vencimento) {
             this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((vencimento == null)) {
+                throw new global::System.ArgumentNullException("vencimento");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(vencimento));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Contas_DBDataSet.Contas_PagarDataTable GetDataByPesquisaDataVencimento(string vencimento) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((vencimento == null)) {
+                throw new global::System.ArgumentNullException("vencimento");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(vencimento));
+            }
+            Contas_DBDataSet.Contas_PagarDataTable dataTable = new Contas_DBDataSet.Contas_PagarDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPesquisaFormaPagamento(Contas_DBDataSet.Contas_PagarDataTable dataTable, string forma) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((forma == null)) {
+                throw new global::System.ArgumentNullException("forma");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(forma));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Contas_DBDataSet.Contas_PagarDataTable GetDataByPesquisaFormaPagamento(string forma) {
+            this.Adapter.SelectCommand = this.CommandCollection[4];
+            if ((forma == null)) {
+                throw new global::System.ArgumentNullException("forma");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(forma));
+            }
+            Contas_DBDataSet.Contas_PagarDataTable dataTable = new Contas_DBDataSet.Contas_PagarDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPesquisaSituacao(Contas_DBDataSet.Contas_PagarDataTable dataTable, string situacao) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            if ((situacao == null)) {
+                throw new global::System.ArgumentNullException("situacao");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(situacao));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Contas_DBDataSet.Contas_PagarDataTable GetDataBy1PesquisaSituacao(string situacao) {
+            this.Adapter.SelectCommand = this.CommandCollection[5];
+            if ((situacao == null)) {
+                throw new global::System.ArgumentNullException("situacao");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(situacao));
+            }
+            Contas_DBDataSet.Contas_PagarDataTable dataTable = new Contas_DBDataSet.Contas_PagarDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPesquisaValor(Contas_DBDataSet.Contas_PagarDataTable dataTable, string valor) {
+            this.Adapter.SelectCommand = this.CommandCollection[6];
             if ((valor == null)) {
                 throw new global::System.ArgumentNullException("valor");
             }
@@ -3962,7 +4093,7 @@ SELECT id, credor, descricao, valor, data_emissao, data_vencimento, data_pagamen
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual Contas_DBDataSet.Contas_PagarDataTable GetDataByPesquisaValor(string valor) {
-            this.Adapter.SelectCommand = this.CommandCollection[3];
+            this.Adapter.SelectCommand = this.CommandCollection[6];
             if ((valor == null)) {
                 throw new global::System.ArgumentNullException("valor");
             }
@@ -4384,7 +4515,7 @@ SELECT id, credor, descricao, valor, data_emissao, data_vencimento, data_pagamen
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> ScalarQueryGetUltimoCodigo() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[7];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6484,10 +6615,11 @@ SELECT id, razao_social, cnpj, endereco, bairro, cidade, uf, cep, telefone, emai
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT login, senha FROM Usuarios WHERE (login = @login) AND (senha = @senha)";
+            this._commandCollection[1].CommandText = "SELECT        login, senha\r\nFROM            Usuarios\r\nWHERE        (login = @Para" +
+                "m1) AND (senha = @Param2)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@login", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@senha", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param1", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Param2", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "senha", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6518,19 +6650,19 @@ SELECT id, razao_social, cnpj, endereco, bairro, cidade, uf, cep, telefone, emai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByUsuariosLogin(Contas_DBDataSet.UsuariosDataTable dataTable, string login, string senha) {
+        public virtual int FillByUsuariosLogin(Contas_DBDataSet.UsuariosDataTable dataTable, string Param1, string Param2) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((login == null)) {
-                throw new global::System.ArgumentNullException("login");
+            if ((Param1 == null)) {
+                throw new global::System.ArgumentNullException("Param1");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(login));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
             }
-            if ((senha == null)) {
-                throw new global::System.ArgumentNullException("senha");
+            if ((Param2 == null)) {
+                throw new global::System.ArgumentNullException("Param2");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(senha));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6543,19 +6675,19 @@ SELECT id, razao_social, cnpj, endereco, bairro, cidade, uf, cep, telefone, emai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual Contas_DBDataSet.UsuariosDataTable GetDataByUsuariosLogin(string login, string senha) {
+        public virtual Contas_DBDataSet.UsuariosDataTable GetDataByUsuariosLogin(string Param1, string Param2) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((login == null)) {
-                throw new global::System.ArgumentNullException("login");
+            if ((Param1 == null)) {
+                throw new global::System.ArgumentNullException("Param1");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(login));
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
             }
-            if ((senha == null)) {
-                throw new global::System.ArgumentNullException("senha");
+            if ((Param2 == null)) {
+                throw new global::System.ArgumentNullException("Param2");
             }
             else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(senha));
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(Param2));
             }
             Contas_DBDataSet.UsuariosDataTable dataTable = new Contas_DBDataSet.UsuariosDataTable();
             this.Adapter.Fill(dataTable);

@@ -16,8 +16,9 @@ namespace Gerenciamento_de_Contas
         //SQL strings
         string strInsert = "INSERT INTO Contas_Pagar (credor, descricao, valor, data_emissao, data_vencimento, data_pagamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao) VALUES (@credor, @descricao, @valor, @data_emissao, @data_vencimento, @data_pagamento, @forma_pagamento, @multa, @juros, @total_parcelas, @valor_parcela, @situacao)";
         string strDelete = "DELETE FROM Contas_Pagar WHERE id = @id";
-        string strSelect = "SELECT * FROM Contas_Pagar WHERE id = @id";
+        string strSelectbyID = "SELECT * FROM Contas_Pagar WHERE (CAST(id AS varchar(20)) LIKE '%' + @id)";
         string strUpdate = "UPDATE Contas_pagar SET credor = @credor, descricao = @descricao, valor = @valor, data_emissao = @data_emissao, data_vencimento = @data_vencimento, data_pagamento = @data_pagamento, forma_pagamento = @forma_pagamento, multa = @multa, juros = @juros, total_parcelas = @total_parcelas, valor_parcela = @valor_parcela, situacao = @situacao WHERE id = @id";
+
 
         public void Inserir(string credor, string descricao, double valor, DateTime data_emissao, DateTime data_vencimento, DateTime data_pagamento, string forma_pagamento, int multa, int juros, int total_parcelas, double valor_parcela, string situacao)
         {
@@ -87,6 +88,23 @@ namespace Gerenciamento_de_Contas
                     Connection.Open();
 
                     Command.ExecuteNonQuery();
+
+                    Connection.Close();
+                }
+            }
+        }
+
+        public void SelectbyID(int id)
+        {
+            using (SqlConnection Connection = new SqlConnection(strConnection))
+            {
+                using (SqlCommand Command = new SqlCommand(strSelectbyID, Connection))
+                {
+                    Command.Parameters.AddWithValue("@id", id);
+
+                    Connection.Open();
+
+                    Command.ExecuteReader();
 
                     Connection.Close();
                 }

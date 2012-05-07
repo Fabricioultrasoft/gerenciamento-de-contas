@@ -80,17 +80,28 @@ namespace Gerenciamento_de_Contas
             situacaoComboBox.Text = null;
         }
 
-        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "ID")
-                this.contas_PagarTableAdapter.FillByPesquisaCodigo(contas_DBDataSet.Contas_Pagar, textBox1.Text);
-            else if (comboBox1.Text == "Credor")
+            try
             {
-                this.contas_PagarTableAdapter.FillByPesquisaCredor(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+                DadosContasPagar DadosSelect = new DadosContasPagar();
+
+                if (comboBox1.Text == "ID")
+                {
+                    DadosSelect.SelectbyID(Convert.ToInt32(textBox1.Text));
+                }
+                else if (comboBox1.Text == "Credor")
+                {
+                    this.contas_PagarTableAdapter.FillByPesquisaCredor(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+                }
+                else if (comboBox1.Text == "Valor")
+                {
+                    this.contas_PagarTableAdapter.FillByPesquisaValor(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+                }
             }
-            else if (comboBox1.Text == "Valor")
+            catch (Exception ex)
             {
-                this.contas_PagarTableAdapter.FillByPesquisaValor(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+                MessageBox.Show("Falha ao acessar os registros!" + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
