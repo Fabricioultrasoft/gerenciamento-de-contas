@@ -68,6 +68,12 @@
     <Compile Include="frm_cadastrarDebito.Designer.cs">
       <DependentUpon>frm_cadastrarDebito.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_consultarDebito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultarDebito.Designer.cs">
+      <DependentUpon>frm_consultarDebito.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_excluirDebito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_cadastrarDebito.resx">
       <DependentUpon>frm_cadastrarDebito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultarDebito.resx">
+      <DependentUpon>frm_consultarDebito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_excluirDebito.resx">
       <DependentUpon>frm_excluirDebito.cs</DependentUpon>

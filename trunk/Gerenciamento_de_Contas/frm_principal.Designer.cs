@@ -109,8 +109,10 @@
             // consultarToolStripMenuItem
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
+            this.consultarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.consultarToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
+            this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
             // 
             // contasaReceberToolStripMenuItem
             // 
@@ -126,25 +128,25 @@
             // cadastrarToolStripMenuItem1
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
             // 
             // alterarToolStripMenuItem1
             // 
             this.alterarToolStripMenuItem1.Name = "alterarToolStripMenuItem1";
-            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.alterarToolStripMenuItem1.Text = "Alterar";
             // 
             // excluirToolStripMenuItem1
             // 
             this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.excluirToolStripMenuItem1.Text = "Excluir";
             // 
             // consultarToolStripMenuItem1
             // 
             this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.consultarToolStripMenuItem1.Text = "Consultar";
             // 
             // projeçõesToolStripMenuItem

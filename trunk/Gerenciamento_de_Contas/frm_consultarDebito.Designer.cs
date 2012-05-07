@@ -1,6 +1,6 @@
 ﻿namespace Gerenciamento_de_Contas
 {
-    partial class frm_excluirDebito
+    partial class frm_consultarDebito
     {
         /// <summary>
         /// Required designer variable.
@@ -29,29 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_excluirDebito));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_consultarDebito));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.contas_PagarDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.forma_pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_pagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.multa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.juros = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total_parcelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor_parcela = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contas_PagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contas_DBDataSet = new Gerenciamento_de_Contas.Contas_DBDataSet();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.contas_PagarTableAdapter = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.Contas_PagarTableAdapter();
             this.tableAdapterManager = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
@@ -63,46 +60,51 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.contas_PagarDataGridView);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.contas_PagarDataGridView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 496);
+            this.panel1.Size = new System.Drawing.Size(1024, 459);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // label1
             // 
-            this.button1.Location = new System.Drawing.Point(863, 436);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(215, 135);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Pesquisar Débito";
             // 
-            // textBox2
+            // comboBox1
             // 
-            this.textBox2.Location = new System.Drawing.Point(228, 440);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(56, 23);
-            this.textBox2.TabIndex = 5;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "ID",
+            "Credor",
+            "Valor ",
+            "Forma de Pagamento",
+            "Data de Emissão",
+            "Status"});
+            this.comboBox1.Location = new System.Drawing.Point(684, 132);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 25);
+            this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
-            // label2
+            // textBox1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(47, 443);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 17);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "ID do débito a ser excluído";
+            this.textBox1.Location = new System.Drawing.Point(338, 132);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(305, 23);
+            this.textBox1.TabIndex = 1;
             // 
             // contas_PagarDataGridView
             // 
@@ -112,21 +114,21 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn4,
-            this.forma_pagamento,
+            this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.data_pagamento,
-            this.multa,
-            this.juros,
-            this.total_parcelas,
-            this.valor_parcela,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.contas_PagarDataGridView.DataSource = this.contas_PagarBindingSource;
-            this.contas_PagarDataGridView.Location = new System.Drawing.Point(44, 189);
+            this.contas_PagarDataGridView.Location = new System.Drawing.Point(41, 193);
+            this.contas_PagarDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.contas_PagarDataGridView.Name = "contas_PagarDataGridView";
             this.contas_PagarDataGridView.Size = new System.Drawing.Size(938, 220);
-            this.contas_PagarDataGridView.TabIndex = 3;
-            this.contas_PagarDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.contas_PagarDataGridView_CellClick);
+            this.contas_PagarDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -150,12 +152,12 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 60;
             // 
-            // forma_pagamento
+            // dataGridViewTextBoxColumn8
             // 
-            this.forma_pagamento.DataPropertyName = "forma_pagamento";
-            this.forma_pagamento.HeaderText = "Forma de Pagamento";
-            this.forma_pagamento.Name = "forma_pagamento";
-            this.forma_pagamento.Width = 80;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "forma_pagamento";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Forma de Pagamento";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 80;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -171,40 +173,40 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 85;
             // 
-            // data_pagamento
+            // dataGridViewTextBoxColumn7
             // 
-            this.data_pagamento.DataPropertyName = "data_pagamento";
-            this.data_pagamento.HeaderText = "Pagamento";
-            this.data_pagamento.Name = "data_pagamento";
-            this.data_pagamento.Width = 85;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "data_pagamento";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Pagamento";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 85;
             // 
-            // multa
+            // dataGridViewTextBoxColumn9
             // 
-            this.multa.DataPropertyName = "multa";
-            this.multa.HeaderText = "Multa";
-            this.multa.Name = "multa";
-            this.multa.Width = 50;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "multa";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Multa";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 50;
             // 
-            // juros
+            // dataGridViewTextBoxColumn10
             // 
-            this.juros.DataPropertyName = "juros";
-            this.juros.HeaderText = "Juros";
-            this.juros.Name = "juros";
-            this.juros.Width = 50;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "juros";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Juros";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 50;
             // 
-            // total_parcelas
+            // dataGridViewTextBoxColumn11
             // 
-            this.total_parcelas.DataPropertyName = "total_parcelas";
-            this.total_parcelas.HeaderText = "Parcelas";
-            this.total_parcelas.Name = "total_parcelas";
-            this.total_parcelas.Width = 40;
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "total_parcelas";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Parcelas";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 40;
             // 
-            // valor_parcela
+            // dataGridViewTextBoxColumn12
             // 
-            this.valor_parcela.DataPropertyName = "valor_parcela";
-            this.valor_parcela.HeaderText = "Valor da Parcela";
-            this.valor_parcela.Name = "valor_parcela";
-            this.valor_parcela.Width = 60;
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "valor_parcela";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Valor da Parcela";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 60;
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -223,40 +225,6 @@
             this.contas_DBDataSet.DataSetName = "Contas_DBDataSet";
             this.contas_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "ID",
-            "Credor",
-            "Valor",
-            "Forma de Pagamento",
-            "Data de Emissão",
-            "Status"});
-            this.comboBox1.Location = new System.Drawing.Point(680, 133);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 25);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(339, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 23);
-            this.textBox1.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(216, 136);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pesquisar Débito";
-            // 
             // contas_PagarTableAdapter
             // 
             this.contas_PagarTableAdapter.ClearBeforeFill = true;
@@ -272,18 +240,18 @@
             this.tableAdapterManager.UpdateOrder = Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
-            // frm_excluirDebito
+            // frm_consultarDebito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 496);
+            this.ClientSize = new System.Drawing.Size(1024, 459);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frm_excluirDebito";
+            this.Name = "frm_consultarDebito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frm_excluirDebito_Load);
+            this.Load += new System.EventHandler(this.frm_consultarDebito_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contas_PagarDataGridView)).EndInit();
@@ -296,28 +264,25 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private Contas_DBDataSet contas_DBDataSet;
         private System.Windows.Forms.BindingSource contas_PagarBindingSource;
         private Contas_DBDataSetTableAdapters.Contas_PagarTableAdapter contas_PagarTableAdapter;
         private Contas_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView contas_PagarDataGridView;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn forma_pagamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn data_pagamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn multa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn juros;
-        private System.Windows.Forms.DataGridViewTextBoxColumn total_parcelas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor_parcela;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
     }
 }

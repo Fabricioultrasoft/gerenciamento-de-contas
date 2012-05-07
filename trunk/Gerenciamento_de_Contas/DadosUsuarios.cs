@@ -15,8 +15,8 @@ namespace Gerenciamento_de_Contas
 
         //SQL strings
         string strSelectLogin = "SELECT * FROM Usuarios WHERE (login = @login) AND (senha = @senha)";
-
-        public bool Login(string login, string senha)
+        
+        public void Login(string login, string senha)
         {
             using (SqlConnection Connection = new SqlConnection(strConnection))
             {
@@ -30,8 +30,6 @@ namespace Gerenciamento_de_Contas
                     Command.ExecuteReader();
 
                     Connection.Close();
-
-                    return true;
                 }
             }
         }

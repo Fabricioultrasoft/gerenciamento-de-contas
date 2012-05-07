@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Gerenciamento_de_Contas
 {
-    public partial class frm_excluirDebito : Form
+    public partial class frm_consultarDebito : Form
     {
-        public frm_excluirDebito()
+        public frm_consultarDebito()
         {
             InitializeComponent();
         }
@@ -24,43 +24,11 @@ namespace Gerenciamento_de_Contas
 
         }
 
-        private void frm_excluirDebito_Load(object sender, EventArgs e)
+        private void frm_consultarDebito_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'contas_DBDataSet.Contas_Pagar' table. You can move, or remove it, as needed.
             this.contas_PagarTableAdapter.Fill(this.contas_DBDataSet.Contas_Pagar);
 
-        }
-
-        private void contas_PagarDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            textBox2.Text = Convert.ToString(contas_PagarDataGridView.CurrentCell.Value);
-        }
-
-        public void excluir(int id)
-        {
-            try
-            {
-                DadosContasPagar Dados = new DadosContasPagar();
-                Dados.Excluir(id);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Falha ao ecluir o registro!" + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(textBox2.Text))
-            {
-                MessageBox.Show("Informe o ID do débito a ser excluído!", "Excluir Débito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                excluir(Convert.ToInt32(textBox2.Text));
-                this.contas_PagarTableAdapter.Fill(this.contas_DBDataSet.Contas_Pagar);
-                MessageBox.Show("Débito exluído com sucesso!", "Ecluir Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);   
-            }
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
@@ -76,6 +44,14 @@ namespace Gerenciamento_de_Contas
             else if (comboBox1.Text == "Valor")
             {
                 this.contas_PagarTableAdapter.FillByPesquisaValor(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+            }
+            else if (comboBox1.Text == "Forma de Pagamento")
+            {
+                this.contas_PagarTableAdapter.FillByPesquisaFormaPagamento(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+            }
+            else if (comboBox1.Text == "Data de Emissão")
+            {
+                this.contas_PagarTableAdapter.FillByPesquisaDataVencimento(contas_DBDataSet.Contas_Pagar, textBox1.Text);
             }
             else if (comboBox1.Text == "Status")
             {

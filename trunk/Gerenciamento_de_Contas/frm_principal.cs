@@ -30,5 +30,10 @@ namespace Gerenciamento_de_Contas
         {
             new frm_excluirDebito().ShowDialog();
         }
+
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_consultarDebito().ShowDialog();
+        }
     }
 }

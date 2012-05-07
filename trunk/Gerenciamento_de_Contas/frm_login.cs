@@ -30,19 +30,13 @@ namespace Gerenciamento_de_Contas
             this.usuariosTableAdapter.Fill(this.contas_DBDataSet.Usuarios);
         }
 
-        public bool login()
-        {
-            DadosUsuarios Dados = new DadosUsuarios();
-            return Dados.Login(tb_login.Text, tb_senha.Text);
-        }
-
         private void bt_entrar_Click(object sender, EventArgs e)
         {
             try
             {
-                bool result = login();
+                int result = this.usuariosTableAdapter.FillByUsuariosLogin(contas_DBDataSet.Usuarios, tb_login.Text, tb_senha.Text);
 
-                if (result == true)
+                if (result == 1)
                 {
                     new frm_principal().ShowDialog();
                     this.Close();
