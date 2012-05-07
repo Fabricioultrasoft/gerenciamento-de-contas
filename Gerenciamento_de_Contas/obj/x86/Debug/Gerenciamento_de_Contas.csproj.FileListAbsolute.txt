@@ -1,0 +1,14 @@
+e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\ResolveAssemblyReference.cache
+e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_login.resources
+e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.Properties.Resources.resources
+e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\GenerateResource.read.1.tlog
+e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\GenerateResource.write.1.tlog
+e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\bin\Debug\Gerenciamento_de_Contas.exe.config
+e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\bin\Debug\Gerenciamento_de_Contas.exe
+e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\bin\Debug\Gerenciamento_de_Contas.pdb
+e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.exe
+e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.pdb
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_principal.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_cadastrarDebito.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_alterarDebito.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_excluirDebito.resources
