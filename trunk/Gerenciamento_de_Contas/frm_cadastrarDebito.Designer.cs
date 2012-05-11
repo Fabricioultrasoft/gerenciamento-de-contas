@@ -41,9 +41,12 @@
             System.Windows.Forms.Label total_parcelasLabel;
             System.Windows.Forms.Label valor_parcelaLabel;
             System.Windows.Forms.Label situacaoLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cadastrarDebito));
             System.Windows.Forms.Label idLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_cadastrarDebito));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.contas_PagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.contas_DBDataSet = new Gerenciamento_de_Contas.Contas_DBDataSet();
             this.bt_novo = new System.Windows.Forms.Button();
             this.bt_salvar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,8 +54,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.credorTextBox = new System.Windows.Forms.TextBox();
-            this.contas_PagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contas_DBDataSet = new Gerenciamento_de_Contas.Contas_DBDataSet();
             this.descricaoTextBox = new System.Windows.Forms.TextBox();
             this.valorTextBox = new System.Windows.Forms.TextBox();
             this.data_emissaoDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -66,7 +67,6 @@
             this.situacaoComboBox = new System.Windows.Forms.ComboBox();
             this.contas_PagarTableAdapter = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.Contas_PagarTableAdapter();
             this.tableAdapterManager = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.TableAdapterManager();
-            this.idTextBox = new System.Windows.Forms.TextBox();
             credorLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
             valorLabel = new System.Windows.Forms.Label();
@@ -217,6 +217,17 @@
             situacaoLabel.TabIndex = 24;
             situacaoLabel.Text = "Situação  *";
             // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.BackColor = System.Drawing.Color.Transparent;
+            idLabel.Location = new System.Drawing.Point(168, 96);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(21, 17);
+            idLabel.TabIndex = 31;
+            idLabel.Text = "ID";
+            idLabel.Visible = false;
+            // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
@@ -258,6 +269,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(694, 593);
             this.panel1.TabIndex = 0;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_PagarBindingSource, "id", true));
+            this.idTextBox.Location = new System.Drawing.Point(206, 96);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(69, 23);
+            this.idTextBox.TabIndex = 32;
+            this.idTextBox.Visible = false;
+            // 
+            // contas_PagarBindingSource
+            // 
+            this.contas_PagarBindingSource.DataMember = "Contas_Pagar";
+            this.contas_PagarBindingSource.DataSource = this.contas_DBDataSet;
+            // 
+            // contas_DBDataSet
+            // 
+            this.contas_DBDataSet.DataSetName = "Contas_DBDataSet";
+            this.contas_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bt_novo
             // 
@@ -327,16 +357,6 @@
             this.credorTextBox.Name = "credorTextBox";
             this.credorTextBox.Size = new System.Drawing.Size(450, 23);
             this.credorTextBox.TabIndex = 3;
-            // 
-            // contas_PagarBindingSource
-            // 
-            this.contas_PagarBindingSource.DataMember = "Contas_Pagar";
-            this.contas_PagarBindingSource.DataSource = this.contas_DBDataSet;
-            // 
-            // contas_DBDataSet
-            // 
-            this.contas_DBDataSet.DataSetName = "Contas_DBDataSet";
-            this.contas_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // descricaoTextBox
             // 
@@ -466,26 +486,6 @@
             this.tableAdapterManager.Projecoes_ReceberTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.BackColor = System.Drawing.Color.Transparent;
-            idLabel.Location = new System.Drawing.Point(168, 96);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(21, 17);
-            idLabel.TabIndex = 31;
-            idLabel.Text = "ID";
-            idLabel.Visible = false;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_PagarBindingSource, "id", true));
-            this.idTextBox.Location = new System.Drawing.Point(206, 96);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(69, 23);
-            this.idTextBox.TabIndex = 32;
-            this.idTextBox.Visible = false;
             // 
             // frm_cadastrarDebito
             // 

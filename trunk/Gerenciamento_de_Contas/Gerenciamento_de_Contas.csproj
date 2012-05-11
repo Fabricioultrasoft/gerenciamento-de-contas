@@ -11,7 +11,8 @@
     <RootNamespace>Gerenciamento_de_Contas</RootNamespace>
     <AssemblyName>Gerenciamento_de_Contas</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -34,11 +35,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,11 +66,11 @@
     </Compile>
     <Compile Include="DadosContasPagar.cs" />
     <Compile Include="DadosUsuarios.cs" />
-    <Compile Include="frm_alterarDebito.cs">
+    <Compile Include="frm_alterarDebito2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_alterarDebito.Designer.cs">
-      <DependentUpon>frm_alterarDebito.cs</DependentUpon>
+    <Compile Include="frm_alterarDebito2.Designer.cs">
+      <DependentUpon>frm_alterarDebito2.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_cadastrarDebito.cs">
       <SubType>Form</SubType>
@@ -73,6 +83,12 @@
     </Compile>
     <Compile Include="frm_consultarDebito.Designer.cs">
       <DependentUpon>frm_consultarDebito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_despesasPendentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_despesasPendentes.Designer.cs">
+      <DependentUpon>frm_despesasPendentes.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_excluirDebito.cs">
       <SubType>Form</SubType>
@@ -94,14 +110,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm_alterarDebito.resx">
-      <DependentUpon>frm_alterarDebito.cs</DependentUpon>
+    <Compile Include="RelatorioDespesasPendentes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RelatorioDespesasPendentes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="frm_alterarDebito2.resx">
+      <DependentUpon>frm_alterarDebito2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_cadastrarDebito.resx">
       <DependentUpon>frm_cadastrarDebito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_consultarDebito.resx">
       <DependentUpon>frm_consultarDebito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_despesasPendentes.resx">
+      <DependentUpon>frm_despesasPendentes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_excluirDebito.resx">
       <DependentUpon>frm_excluirDebito.cs</DependentUpon>
@@ -120,7 +145,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RelatorioDespesasPendentes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioDespesasPendentes.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Contas_DBDataSet.xsc">
       <DependentUpon>Contas_DBDataSet.xsd</DependentUpon>
@@ -142,6 +172,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

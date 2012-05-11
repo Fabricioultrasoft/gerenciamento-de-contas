@@ -43,6 +43,7 @@
             this.projeçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.despesasPendentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ferramentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configurançõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
@@ -163,9 +164,18 @@
             // 
             // relatóriosToolStripMenuItem
             // 
+            this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.despesasPendentesToolStripMenuItem});
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
             this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(84, 21);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // despesasPendentesToolStripMenuItem
+            // 
+            this.despesasPendentesToolStripMenuItem.Name = "despesasPendentesToolStripMenuItem";
+            this.despesasPendentesToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.despesasPendentesToolStripMenuItem.Text = "Despesas Pendentes";
+            this.despesasPendentesToolStripMenuItem.Click += new System.EventHandler(this.despesasPendentesToolStripMenuItem_Click);
             // 
             // ferramentasToolStripMenuItem
             // 
@@ -251,5 +261,6 @@
         private System.Windows.Forms.ToolStripMenuItem ferramentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configurançõesToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem despesasPendentesToolStripMenuItem;
     }
 }

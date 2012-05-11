@@ -23,7 +23,7 @@ namespace Gerenciamento_de_Contas
 
         private void alterarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frm_alterarDebito().ShowDialog();
+            new frm_alterarDebito2().ShowDialog();
         }
 
         private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,6 +34,11 @@ namespace Gerenciamento_de_Contas
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frm_consultarDebito().ShowDialog();
+        }
+
+        private void despesasPendentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_despesasPendentes().ShowDialog();
         }
     }
 }

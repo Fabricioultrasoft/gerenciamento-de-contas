@@ -21,14 +21,13 @@ namespace Gerenciamento_de_Contas
             this.Validate();
             this.contas_PagarBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.contas_DBDataSet);
-
         }
 
         private void frm_alterarDebito_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'contas_DBDataSet.Contas_Pagar' table. You can move, or remove it, as needed.
             this.contas_PagarTableAdapter.Fill(this.contas_DBDataSet.Contas_Pagar);
-            apagarTextBox();
+            
         }
 
         public void GravarDados()
@@ -46,7 +45,8 @@ namespace Gerenciamento_de_Contas
                 double valor_parcela = Convert.ToDouble(valor_parcelaTextBox.Text);
 
                 DadosContasPagar Dados = new DadosContasPagar();
-                Dados.Atualizar(id, credorTextBox.Text, descricaoTextBox.Text, valor, data_emissao, data_vencimento, data_pagamento, forma_pagamentoComboBox.Text, multa, juros, total_parcelas, valor_parcela, situacaoComboBox.Text);  
+                Dados.Atualizar(id, credorTextBox.Text, descricaoTextBox.Text, valor, data_emissao, data_vencimento, data_pagamento, forma_pagamentoComboBox.Text, multa, juros, total_parcelas, valor_parcela, situacaoComboBox.Text);
+  
             }
             catch (Exception ex)
             {
@@ -82,27 +82,33 @@ namespace Gerenciamento_de_Contas
 
         private void comboBox1_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            try
+            if (comboBox1.Text == "ID")
             {
-                DadosContasPagar DadosSelect = new DadosContasPagar();
+                this.contas_PagarTableAdapter.FillByPesquisaCodigo(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+            }
+            else if (comboBox1.Text == "Credor")
+            {
+                this.contas_PagarTableAdapter.FillByPesquisaCredor(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+            }
+            else if (comboBox1.Text == "Valor")
+            {
+                this.contas_PagarTableAdapter.FillByPesquisaValor(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+            }
+        }
 
-                if (comboBox1.Text == "ID")
-                {
-                    DadosSelect.SelectbyID(Convert.ToInt32(textBox1.Text));
-                }
-                else if (comboBox1.Text == "Credor")
-                {
-                    this.contas_PagarTableAdapter.FillByPesquisaCredor(contas_DBDataSet.Contas_Pagar, textBox1.Text);
-                }
-                else if (comboBox1.Text == "Valor")
-                {
-                    this.contas_PagarTableAdapter.FillByPesquisaValor(contas_DBDataSet.Contas_Pagar, textBox1.Text);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Falha ao acessar os registros!" + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            comboBox1_SelectedValueChanged_1(sender, e);
+        }
+
+        private void comboBox1_TextUpdate(object sender, EventArgs e)
+        {
+            comboBox1_SelectedValueChanged_1(sender, e);
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            comboBox1_SelectedValueChanged_1(sender, e);
         }
     }
 }
