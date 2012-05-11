@@ -59,7 +59,11 @@ namespace Gerenciamento_de_Contas
             {
                 excluir(Convert.ToInt32(textBox2.Text));
                 this.contas_PagarTableAdapter.Fill(this.contas_DBDataSet.Contas_Pagar);
-                MessageBox.Show("Débito exluído com sucesso!", "Ecluir Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);   
+                MessageBox.Show("Débito exluído com sucesso!", "Ecluir Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                textBox1.Text = null;
+                textBox2.Text = null;
+                comboBox1.Text = null;
             }
         }
 

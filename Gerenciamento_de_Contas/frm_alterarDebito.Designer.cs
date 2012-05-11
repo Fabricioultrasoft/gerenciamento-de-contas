@@ -270,7 +270,7 @@
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_PagarBindingSource, "id", true));
             this.idTextBox.Location = new System.Drawing.Point(197, 187);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 23);
+            this.idTextBox.Size = new System.Drawing.Size(63, 23);
             this.idTextBox.TabIndex = 1;
             this.idTextBox.Visible = false;
             // 
@@ -291,11 +291,14 @@
             "ID",
             "Credor ",
             "Valor"});
-            this.comboBox1.Location = new System.Drawing.Point(526, 120);
+            this.comboBox1.Location = new System.Drawing.Point(526, 122);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 25);
             this.comboBox1.TabIndex = 33;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.TextUpdate += new System.EventHandler(this.comboBox1_TextUpdate);
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged_1);
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
             // textBox1
             // 
