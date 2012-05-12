@@ -3806,7 +3806,7 @@ SELECT id, credor, descricao, valor, data_emissao, data_vencimento, data_pagamen
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[8];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[9];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, credor, descricao, valor, data_emissao, data_vencimento, data_pagament" +
@@ -3861,8 +3861,14 @@ WHERE        (CAST(data_vencimento AS varchar(10)) LIKE '%' + @vencimento)";
             this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valor", global::System.Data.SqlDbType.VarChar, 1024, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[7].Connection = this.Connection;
-            this._commandCollection[7].CommandText = "SELECT        MAX(id) AS Expr1\r\nFROM            Contas_Pagar";
+            this._commandCollection[7].CommandText = "SELECT        id, credor, descricao, valor, data_emissao, data_vencimento, data_p" +
+                "agamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao" +
+                "\r\nFROM            Contas_Pagar\r\nWHERE        (situacao = \'PENDENTE\')";
             this._commandCollection[7].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[8].Connection = this.Connection;
+            this._commandCollection[8].CommandText = "SELECT        MAX(id) AS Expr1\r\nFROM            Contas_Pagar";
+            this._commandCollection[8].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4100,6 +4106,30 @@ WHERE        (CAST(data_vencimento AS varchar(10)) LIKE '%' + @vencimento)";
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(valor));
             }
+            Contas_DBDataSet.Contas_PagarDataTable dataTable = new Contas_DBDataSet.Contas_PagarDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBySelectDespesasPendentes(Contas_DBDataSet.Contas_PagarDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Contas_DBDataSet.Contas_PagarDataTable GetDataBySelectDespesasPendentes() {
+            this.Adapter.SelectCommand = this.CommandCollection[7];
             Contas_DBDataSet.Contas_PagarDataTable dataTable = new Contas_DBDataSet.Contas_PagarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -4515,7 +4545,7 @@ WHERE        (CAST(data_vencimento AS varchar(10)) LIKE '%' + @vencimento)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual global::System.Nullable<int> ScalarQueryGetUltimoCodigo() {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[7];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[8];
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

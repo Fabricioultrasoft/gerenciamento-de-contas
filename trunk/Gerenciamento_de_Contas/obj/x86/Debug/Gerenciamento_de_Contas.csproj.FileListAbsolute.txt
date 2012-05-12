@@ -28,3 +28,5 @@ E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fun
 E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fundamentos de Engenharia de Software\Projeto\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fundamentos de Engenharia de Software\Projeto\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_despesasPendentes.resources
 E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fundamentos de Engenharia de Software\Projeto\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_alterarDebito2.resources
+E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fundamentos de Engenharia de Software\Projeto\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\RdlCompile.cache
+E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fundamentos de Engenharia de Software\Projeto\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\RdlCompile.compiled
