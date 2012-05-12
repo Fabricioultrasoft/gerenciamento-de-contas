@@ -192,6 +192,16 @@ WHERE        (CAST(valor AS varchar(20)) LIKE '%' + @valor)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectName="Contas_DB.dbo.Contas_Pagar" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBySelectDespesasPendentes" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBySelectDespesasPendentes" GeneratorSourceName="FillBySelectDespesasPendentes" GetMethodModifier="Public" GetMethodName="GetDataBySelectDespesasPendentes" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBySelectDespesasPendentes" UserSourceName="FillBySelectDespesasPendentes">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        id, credor, descricao, valor, data_emissao, data_vencimento, data_pagamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao
+FROM            Contas_Pagar
+WHERE        (situacao = 'PENDENTE')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarQueryGetUltimoCodigo" Modifier="Public" Name="ScalarQueryGetUltimoCodigo" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ScalarQueryGetUltimoCodigo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">

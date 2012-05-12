@@ -167,13 +167,14 @@
             this.relatóriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.despesasPendentesToolStripMenuItem});
             this.relatóriosToolStripMenuItem.Name = "relatóriosToolStripMenuItem";
-            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(84, 21);
+            this.relatóriosToolStripMenuItem.Size = new System.Drawing.Size(94, 21);
             this.relatóriosToolStripMenuItem.Text = "Relatórios";
             // 
             // despesasPendentesToolStripMenuItem
             // 
             this.despesasPendentesToolStripMenuItem.Name = "despesasPendentesToolStripMenuItem";
-            this.despesasPendentesToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.despesasPendentesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.despesasPendentesToolStripMenuItem.Size = new System.Drawing.Size(258, 22);
             this.despesasPendentesToolStripMenuItem.Text = "Despesas Pendentes";
             this.despesasPendentesToolStripMenuItem.Click += new System.EventHandler(this.despesasPendentesToolStripMenuItem_Click);
             // 

@@ -21,11 +21,8 @@ namespace Gerenciamento_de_Contas
             // TODO: This line of code loads data into the 'contas_DBDataSet.Contas_Pagar' table. You can move, or remove it, as needed.
             this.contas_PagarTableAdapter.Fill(this.contas_DBDataSet.Contas_Pagar);
 
-            RelatorioDespesasPendentes RDP = new RelatorioDespesasPendentes();
-
-            RDP.SetDataSource(contas_DBDataSet);
-
-            crystalReportViewer1.ReportSource = RDP;
+            reportViewer1.LocalReport.Refresh();
+            this.reportViewer1.RefreshReport();
         }
 
         private void contas_PagarBindingNavigatorSaveItem_Click(object sender, EventArgs e)

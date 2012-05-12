@@ -110,12 +110,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RelatorioDespesasPendentes.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RelatorioDespesasPendentes.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <EmbeddedResource Include="frm_alterarDebito2.resx">
       <DependentUpon>frm_alterarDebito2.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,10 +141,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RelatorioDespesasPendentes.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RelatorioDespesasPendentes.cs</LastGenOutput>
-    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioDespesasPendentes.rdlc" />
     <None Include="app.config" />
     <None Include="Contas_DBDataSet.xsc">
       <DependentUpon>Contas_DBDataSet.xsd</DependentUpon>
