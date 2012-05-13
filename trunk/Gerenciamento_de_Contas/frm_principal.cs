@@ -40,5 +40,10 @@ namespace Gerenciamento_de_Contas
         {
             new frm_despesasPendentes().ShowDialog();
         }
+
+        private void novaProjeçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_addProjDebito().ShowDialog();
+        }
     }
 }

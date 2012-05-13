@@ -65,7 +65,14 @@
       <DependentUpon>Contas_DBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DadosContasPagar.cs" />
+    <Compile Include="DadosProjecoesPagar.cs" />
     <Compile Include="DadosUsuarios.cs" />
+    <Compile Include="frm_addProjDebito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_addProjDebito.Designer.cs">
+      <DependentUpon>frm_addProjDebito.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_alterarDebito2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +103,12 @@
     <Compile Include="frm_excluirDebito.Designer.cs">
       <DependentUpon>frm_excluirDebito.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_excluirProjDebito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_excluirProjDebito.Designer.cs">
+      <DependentUpon>frm_excluirProjDebito.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +123,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_addProjDebito.resx">
+      <DependentUpon>frm_addProjDebito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_alterarDebito2.resx">
       <DependentUpon>frm_alterarDebito2.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,12 +141,16 @@
     <EmbeddedResource Include="frm_excluirDebito.resx">
       <DependentUpon>frm_excluirDebito.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_excluirProjDebito.resx">
+      <DependentUpon>frm_excluirProjDebito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_principal.resx">
       <DependentUpon>frm_principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GraficoProjPagar.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

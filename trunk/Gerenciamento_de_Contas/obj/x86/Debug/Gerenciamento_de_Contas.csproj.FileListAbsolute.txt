@@ -10,7 +10,6 @@ e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gere
 e:\users\aldo\documents\visual studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.pdb
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_principal.resources
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_cadastrarDebito.resources
-E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_alterarDebito.resources
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_excluirDebito.resources
 E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fundamentos de Engenharia de Software\Projeto\Gerenciamento_de_Contas\Gerenciamento_de_Contas\bin\Debug\Gerenciamento_de_Contas.exe.config
 E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fundamentos de Engenharia de Software\Projeto\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.exe
@@ -30,3 +29,10 @@ E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fun
 E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fundamentos de Engenharia de Software\Projeto\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_alterarDebito2.resources
 E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fundamentos de Engenharia de Software\Projeto\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\RdlCompile.cache
 E:\Users\Aldo\Documents\Bacharelado em Sistemas de Informação\3º Período\Fundamentos de Engenharia de Software\Projeto\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\RdlCompile.compiled
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_alterarDebito2.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_consultarDebito.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_despesasPendentes.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\RdlCompile.cache
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\RdlCompile.compiled
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_addProjDebito.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_excluirProjDebito.resources
