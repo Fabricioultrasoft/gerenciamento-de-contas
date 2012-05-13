@@ -5994,11 +5994,17 @@ SELECT id, razao_social, cnpj, endereco, bairro, cidade, uf, cep, telefone, emai
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT mes, valor FROM dbo.Projecoes_Pagar";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        mes, valor\r\nFROM            Projecoes_Pagar\r\nWHERE        (mes = @m" +
+                "es)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mes", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "mes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6020,6 +6026,42 @@ SELECT id, razao_social, cnpj, endereco, bairro, cidade, uf, cep, telefone, emai
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Contas_DBDataSet.Projecoes_PagarDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            Contas_DBDataSet.Projecoes_PagarDataTable dataTable = new Contas_DBDataSet.Projecoes_PagarDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPPSelectByMes(Contas_DBDataSet.Projecoes_PagarDataTable dataTable, string mes) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((mes == null)) {
+                throw new global::System.ArgumentNullException("mes");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(mes));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Contas_DBDataSet.Projecoes_PagarDataTable GetDataByPPSelectByMes(string mes) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((mes == null)) {
+                throw new global::System.ArgumentNullException("mes");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(mes));
+            }
             Contas_DBDataSet.Projecoes_PagarDataTable dataTable = new Contas_DBDataSet.Projecoes_PagarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

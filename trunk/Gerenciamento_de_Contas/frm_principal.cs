@@ -45,5 +45,10 @@ namespace Gerenciamento_de_Contas
         {
             new frm_addProjDebito().ShowDialog();
         }
+
+        private void excluirProjeçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_excluirProjDebito().ShowDialog();
+        }
     }
 }
