@@ -41,6 +41,9 @@
             this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.projeçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.despesasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novaProjeçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirProjeçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gráficosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatóriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.despesasPendentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,9 +51,6 @@
             this.configurançõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.despesasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.novaProjeçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirProjeçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -161,6 +161,29 @@
             this.projeçõesToolStripMenuItem.Size = new System.Drawing.Size(83, 21);
             this.projeçõesToolStripMenuItem.Text = "Projeções";
             // 
+            // despesasToolStripMenuItem
+            // 
+            this.despesasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novaProjeçãoToolStripMenuItem,
+            this.excluirProjeçãoToolStripMenuItem});
+            this.despesasToolStripMenuItem.Name = "despesasToolStripMenuItem";
+            this.despesasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.despesasToolStripMenuItem.Text = "Despesas";
+            // 
+            // novaProjeçãoToolStripMenuItem
+            // 
+            this.novaProjeçãoToolStripMenuItem.Name = "novaProjeçãoToolStripMenuItem";
+            this.novaProjeçãoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.novaProjeçãoToolStripMenuItem.Text = "Nova Projeção";
+            this.novaProjeçãoToolStripMenuItem.Click += new System.EventHandler(this.novaProjeçãoToolStripMenuItem_Click);
+            // 
+            // excluirProjeçãoToolStripMenuItem
+            // 
+            this.excluirProjeçãoToolStripMenuItem.Name = "excluirProjeçãoToolStripMenuItem";
+            this.excluirProjeçãoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.excluirProjeçãoToolStripMenuItem.Text = "Excluir Projeção";
+            this.excluirProjeçãoToolStripMenuItem.Click += new System.EventHandler(this.excluirProjeçãoToolStripMenuItem_Click);
+            // 
             // gráficosToolStripMenuItem
             // 
             this.gráficosToolStripMenuItem.Name = "gráficosToolStripMenuItem";
@@ -223,28 +246,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1207, 672);
             this.panel1.TabIndex = 2;
-            // 
-            // despesasToolStripMenuItem
-            // 
-            this.despesasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.novaProjeçãoToolStripMenuItem,
-            this.excluirProjeçãoToolStripMenuItem});
-            this.despesasToolStripMenuItem.Name = "despesasToolStripMenuItem";
-            this.despesasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.despesasToolStripMenuItem.Text = "Despesas";
-            // 
-            // novaProjeçãoToolStripMenuItem
-            // 
-            this.novaProjeçãoToolStripMenuItem.Name = "novaProjeçãoToolStripMenuItem";
-            this.novaProjeçãoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.novaProjeçãoToolStripMenuItem.Text = "Nova Projeção";
-            this.novaProjeçãoToolStripMenuItem.Click += new System.EventHandler(this.novaProjeçãoToolStripMenuItem_Click);
-            // 
-            // excluirProjeçãoToolStripMenuItem
-            // 
-            this.excluirProjeçãoToolStripMenuItem.Name = "excluirProjeçãoToolStripMenuItem";
-            this.excluirProjeçãoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
-            this.excluirProjeçãoToolStripMenuItem.Text = "Excluir Projeção";
             // 
             // frm_principal
             // 

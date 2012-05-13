@@ -61,10 +61,15 @@ namespace Gerenciamento_de_Contas
                 this.contas_PagarTableAdapter.Fill(this.contas_DBDataSet.Contas_Pagar);
                 MessageBox.Show("Débito exluído com sucesso!", "Ecluir Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                textBox1.Text = null;
-                textBox2.Text = null;
-                comboBox1.Text = null;
+                apagarTextBox();
             }
+        }
+
+        public void apagarTextBox()
+        {
+            textBox1.Text = null;
+            textBox2.Text = null;
+            comboBox1.Text = null;
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)

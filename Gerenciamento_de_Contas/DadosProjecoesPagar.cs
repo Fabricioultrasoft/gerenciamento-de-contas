@@ -16,12 +16,32 @@ namespace Gerenciamento_de_Contas
         //SQL strings
         string strInsert = "INSERT INTO Projecoes_Pagar (mes, valor) VALUES (@mes, @valor)";
         string strDelete = "DELETE FROM Projecoes_Pagar WHERE mes = @mes";
+        string strUpdate = "UPDATE Projecoes_Pagar SET valor = @valor WHERE mes = @mes";
 
         public void Inserir(string mes, double valor)
         {
             using (SqlConnection Connection = new SqlConnection(strConnection))
             {
                 using (SqlCommand Command = new SqlCommand(strInsert, Connection))
+                {
+                    Command.Parameters.AddWithValue("@mes", mes);
+                    Command.Parameters.AddWithValue("@valor", valor);
+
+                    Connection.Open();
+
+                    Command.ExecuteNonQuery();
+
+                    Connection.Close();
+                }
+
+            }
+        }
+
+        public void Atualizar(string mes, double valor)
+        {
+            using (SqlConnection Connection = new SqlConnection(strConnection))
+            {
+                using (SqlCommand Command = new SqlCommand(strUpdate, Connection))
                 {
                     Command.Parameters.AddWithValue("@mes", mes);
                     Command.Parameters.AddWithValue("@valor", valor);
