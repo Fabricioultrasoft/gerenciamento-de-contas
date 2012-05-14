@@ -132,25 +132,26 @@
             // cadastrarToolStripMenuItem1
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
             // alterarToolStripMenuItem1
             // 
             this.alterarToolStripMenuItem1.Name = "alterarToolStripMenuItem1";
-            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.alterarToolStripMenuItem1.Text = "Alterar";
             // 
             // excluirToolStripMenuItem1
             // 
             this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.excluirToolStripMenuItem1.Text = "Excluir";
             // 
             // consultarToolStripMenuItem1
             // 
             this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.consultarToolStripMenuItem1.Text = "Consultar";
             // 
             // projeçõesToolStripMenuItem
@@ -167,7 +168,7 @@
             this.novaProjeçãoToolStripMenuItem,
             this.excluirProjeçãoToolStripMenuItem});
             this.despesasToolStripMenuItem.Name = "despesasToolStripMenuItem";
-            this.despesasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.despesasToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.despesasToolStripMenuItem.Text = "Despesas";
             // 
             // novaProjeçãoToolStripMenuItem

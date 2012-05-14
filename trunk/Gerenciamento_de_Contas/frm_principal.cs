@@ -50,5 +50,10 @@ namespace Gerenciamento_de_Contas
         {
             new frm_excluirProjDebito().ShowDialog();
         }
+
+        private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new frm_cadastrarCredito().ShowDialog();
+        }
     }
 }

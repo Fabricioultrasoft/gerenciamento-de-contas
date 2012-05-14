@@ -65,6 +65,7 @@
       <DependentUpon>Contas_DBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DadosContasPagar.cs" />
+    <Compile Include="DadosContasReceber.cs" />
     <Compile Include="DadosProjecoesPagar.cs" />
     <Compile Include="DadosUsuarios.cs" />
     <Compile Include="frm_addProjDebito.cs">
@@ -78,6 +79,12 @@
     </Compile>
     <Compile Include="frm_alterarDebito2.Designer.cs">
       <DependentUpon>frm_alterarDebito2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cadastrarCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cadastrarCredito.Designer.cs">
+      <DependentUpon>frm_cadastrarCredito.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_cadastrarDebito.cs">
       <SubType>Form</SubType>
@@ -128,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_alterarDebito2.resx">
       <DependentUpon>frm_alterarDebito2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_cadastrarCredito.resx">
+      <DependentUpon>frm_cadastrarCredito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_cadastrarDebito.resx">
       <DependentUpon>frm_cadastrarDebito.cs</DependentUpon>

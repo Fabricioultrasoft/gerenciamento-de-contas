@@ -68,7 +68,7 @@ namespace Gerenciamento_de_Contas
             else
             {
                 GravarDados();
-                MessageBox.Show("Cadastro realizado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cadastro realizado com sucesso!", "Cadastrar Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

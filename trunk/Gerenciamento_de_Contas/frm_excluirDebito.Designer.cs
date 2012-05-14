@@ -231,17 +231,16 @@
             "Credor",
             "Valor",
             "Forma de Pagamento",
-            "Data de Emissão",
             "Status"});
-            this.comboBox1.Location = new System.Drawing.Point(680, 133);
+            this.comboBox1.Location = new System.Drawing.Point(652, 126);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 25);
+            this.comboBox1.Size = new System.Drawing.Size(157, 25);
             this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(339, 133);
+            this.textBox1.Location = new System.Drawing.Point(311, 126);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(305, 23);
             this.textBox1.TabIndex = 1;
@@ -250,7 +249,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(216, 136);
+            this.label1.Location = new System.Drawing.Point(188, 129);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 17);

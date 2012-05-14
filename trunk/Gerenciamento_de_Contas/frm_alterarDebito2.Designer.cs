@@ -373,7 +373,7 @@
             this.bt_anterior.Location = new System.Drawing.Point(114, 642);
             this.bt_anterior.Margin = new System.Windows.Forms.Padding(4);
             this.bt_anterior.Name = "bt_anterior";
-            this.bt_anterior.Size = new System.Drawing.Size(34, 30);
+            this.bt_anterior.Size = new System.Drawing.Size(32, 30);
             this.bt_anterior.TabIndex = 29;
             this.bt_anterior.UseVisualStyleBackColor = true;
             this.bt_anterior.Click += new System.EventHandler(this.bt_anterior_Click);
@@ -384,7 +384,7 @@
             this.bt_proximo.Location = new System.Drawing.Point(156, 642);
             this.bt_proximo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_proximo.Name = "bt_proximo";
-            this.bt_proximo.Size = new System.Drawing.Size(34, 30);
+            this.bt_proximo.Size = new System.Drawing.Size(32, 30);
             this.bt_proximo.TabIndex = 28;
             this.bt_proximo.UseVisualStyleBackColor = true;
             this.bt_proximo.Click += new System.EventHandler(this.bt_proximo_Click);
@@ -395,7 +395,7 @@
             this.bt_primeiro.Location = new System.Drawing.Point(61, 642);
             this.bt_primeiro.Margin = new System.Windows.Forms.Padding(4);
             this.bt_primeiro.Name = "bt_primeiro";
-            this.bt_primeiro.Size = new System.Drawing.Size(34, 30);
+            this.bt_primeiro.Size = new System.Drawing.Size(32, 30);
             this.bt_primeiro.TabIndex = 27;
             this.bt_primeiro.UseVisualStyleBackColor = true;
             this.bt_primeiro.Click += new System.EventHandler(this.bt_primeiro_Click);
@@ -406,7 +406,7 @@
             this.bt_ultimo.Location = new System.Drawing.Point(208, 642);
             this.bt_ultimo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_ultimo.Name = "bt_ultimo";
-            this.bt_ultimo.Size = new System.Drawing.Size(34, 30);
+            this.bt_ultimo.Size = new System.Drawing.Size(32, 30);
             this.bt_ultimo.TabIndex = 26;
             this.bt_ultimo.UseVisualStyleBackColor = true;
             this.bt_ultimo.Click += new System.EventHandler(this.bt_ultimo_Click);
