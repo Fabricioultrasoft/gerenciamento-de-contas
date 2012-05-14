@@ -39,7 +39,7 @@ namespace Gerenciamento_de_Contas
                 double valor = Convert.ToDouble(valorTextBox.Text);
 
                 DadosProjecoesPagar Dados = new DadosProjecoesPagar();
-                Dados.Inserir(mesComboBox.Text, valor);
+                Dados.Inserir(mesComboBox.Text.ToUpper(), valor);
             }
             catch (Exception ex)
             {
@@ -54,7 +54,7 @@ namespace Gerenciamento_de_Contas
                 double valor = Convert.ToDouble(valorTextBox.Text);
 
                 DadosProjecoesPagar Dados = new DadosProjecoesPagar();
-                Dados.Atualizar(mesComboBox.Text, valor);
+                Dados.Atualizar(mesComboBox.Text.ToUpper(), valor);
             }
             catch (Exception ex)
             {

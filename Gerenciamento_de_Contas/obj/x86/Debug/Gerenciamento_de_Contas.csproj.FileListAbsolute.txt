@@ -36,3 +36,4 @@ E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gere
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\RdlCompile.compiled
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_addProjDebito.resources
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_excluirProjDebito.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_cadastrarCredito.resources
