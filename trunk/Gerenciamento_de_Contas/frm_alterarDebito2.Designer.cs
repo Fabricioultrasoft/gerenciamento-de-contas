@@ -108,12 +108,12 @@
             // 
             credorLabel.AutoSize = true;
             credorLabel.BackColor = System.Drawing.Color.Transparent;
-            credorLabel.Location = new System.Drawing.Point(141, 250);
+            credorLabel.Location = new System.Drawing.Point(128, 250);
             credorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             credorLabel.Name = "credorLabel";
-            credorLabel.Size = new System.Drawing.Size(51, 17);
+            credorLabel.Size = new System.Drawing.Size(64, 17);
             credorLabel.TabIndex = 2;
-            credorLabel.Text = "Credor";
+            credorLabel.Text = "Credor  *";
             // 
             // descricaoLabel
             // 
@@ -130,12 +130,12 @@
             // 
             valorLabel.AutoSize = true;
             valorLabel.BackColor = System.Drawing.Color.Transparent;
-            valorLabel.Location = new System.Drawing.Point(151, 281);
+            valorLabel.Location = new System.Drawing.Point(140, 281);
             valorLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(41, 17);
+            valorLabel.Size = new System.Drawing.Size(54, 17);
             valorLabel.TabIndex = 6;
-            valorLabel.Text = "Valor";
+            valorLabel.Text = "Valor  *";
             // 
             // data_emissaoLabel
             // 
@@ -174,12 +174,12 @@
             // 
             forma_pagamentoLabel.AutoSize = true;
             forma_pagamentoLabel.BackColor = System.Drawing.Color.Transparent;
-            forma_pagamentoLabel.Location = new System.Drawing.Point(48, 312);
+            forma_pagamentoLabel.Location = new System.Drawing.Point(35, 312);
             forma_pagamentoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             forma_pagamentoLabel.Name = "forma_pagamentoLabel";
-            forma_pagamentoLabel.Size = new System.Drawing.Size(144, 17);
+            forma_pagamentoLabel.Size = new System.Drawing.Size(157, 17);
             forma_pagamentoLabel.TabIndex = 14;
-            forma_pagamentoLabel.Text = "Forma de Pagamento";
+            forma_pagamentoLabel.Text = "Forma de Pagamento  *";
             // 
             // multaLabel
             // 
@@ -232,9 +232,9 @@
             situacaoLabel.Location = new System.Drawing.Point(131, 576);
             situacaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             situacaoLabel.Name = "situacaoLabel";
-            situacaoLabel.Size = new System.Drawing.Size(63, 17);
+            situacaoLabel.Size = new System.Drawing.Size(61, 17);
             situacaoLabel.TabIndex = 24;
-            situacaoLabel.Text = "Situação";
+            situacaoLabel.Text = "Status  *";
             // 
             // panel1
             // 
