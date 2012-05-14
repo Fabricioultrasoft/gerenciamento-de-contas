@@ -252,9 +252,9 @@
             this.label1.Location = new System.Drawing.Point(188, 129);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.Size = new System.Drawing.Size(114, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Pesquisar Débito";
+            this.label1.Text = "Pesquisar débito";
             // 
             // contas_PagarTableAdapter
             // 

@@ -30,5 +30,29 @@ namespace Gerenciamento_de_Contas
             this.contas_ReceberTableAdapter.Fill(this.contas_DBDataSet.Contas_Receber);
 
         }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "ID")
+            {
+                this.contas_ReceberTableAdapter.FillByPesquisaCodigo(contas_DBDataSet.Contas_Receber, textBox1.Text);
+            }
+            else if (comboBox1.Text == "Devedor")
+            {
+                this.contas_ReceberTableAdapter.FillByPesquisaDevedor(contas_DBDataSet.Contas_Receber, textBox1.Text);
+            }
+            else if (comboBox1.Text == "Valor")
+            {
+                this.contas_ReceberTableAdapter.FillByPesquisaValor(contas_DBDataSet.Contas_Receber, textBox1.Text);
+            }
+            else if (comboBox1.Text == "Forma de Pagamento")
+            {
+                this.contas_ReceberTableAdapter.FillByPesquisaFormaPagamento(contas_DBDataSet.Contas_Receber, textBox1.Text.ToUpper());
+            }
+            else if (comboBox1.Text == "Status")
+            {
+                this.contas_ReceberTableAdapter.FillByPesquisaSituacao(contas_DBDataSet.Contas_Receber, textBox1.Text.ToUpper());
+            }
+        }
     }
 }
