@@ -55,5 +55,15 @@ namespace Gerenciamento_de_Contas
         {
             new frm_cadastrarCredito().ShowDialog();
         }
+
+        private void consultarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new frm_consultarCredito().ShowDialog();
+        }
+
+        private void alterarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new frm_alterarCredito().ShowDialog();
+        }
     }
 }

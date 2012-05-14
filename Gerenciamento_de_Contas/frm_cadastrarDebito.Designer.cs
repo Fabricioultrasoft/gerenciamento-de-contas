@@ -210,12 +210,12 @@
             // 
             situacaoLabel.AutoSize = true;
             situacaoLabel.BackColor = System.Drawing.Color.Transparent;
-            situacaoLabel.Location = new System.Drawing.Point(122, 468);
+            situacaoLabel.Location = new System.Drawing.Point(137, 468);
             situacaoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             situacaoLabel.Name = "situacaoLabel";
-            situacaoLabel.Size = new System.Drawing.Size(76, 17);
+            situacaoLabel.Size = new System.Drawing.Size(61, 17);
             situacaoLabel.TabIndex = 24;
-            situacaoLabel.Text = "Situação  *";
+            situacaoLabel.Text = "Status  *";
             // 
             // idLabel
             // 

@@ -325,7 +325,17 @@ SELECT id, devedor, descricao, valor, data_emissao, data_vencimento, data_pagame
               <Mapping SourceColumn="valor_parcela" DataSetColumn="valor_parcela" />
               <Mapping SourceColumn="situacao" DataSetColumn="situacao" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarQueryGetUltimoCodigo" Modifier="Public" Name="ScalarQueryGetUltimoCodigo" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ScalarQueryGetUltimoCodigo">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MAX(id) AS Expr1
+FROM            Contas_Receber</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FornecedoresTableAdapter" GeneratorDataComponentClassName="FornecedoresTableAdapter" Name="Fornecedores" UserDataComponentName="FornecedoresTableAdapter">
             <MainSource>
