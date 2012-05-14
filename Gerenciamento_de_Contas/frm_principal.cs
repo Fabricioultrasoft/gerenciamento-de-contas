@@ -65,5 +65,10 @@ namespace Gerenciamento_de_Contas
         {
             new frm_alterarCredito().ShowDialog();
         }
+
+        private void excluirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new frm_excluirCredito().ShowDialog();
+        }
     }
 }

@@ -102,7 +102,7 @@ namespace Gerenciamento_de_Contas
             else
             {
                 GravarDados();
-                MessageBox.Show("Alteração realizada com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Alteração realizada com sucesso!", "Alterar Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

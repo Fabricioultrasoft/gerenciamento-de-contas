@@ -116,6 +116,12 @@
     <Compile Include="frm_despesasPendentes.Designer.cs">
       <DependentUpon>frm_despesasPendentes.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_excluirCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_excluirCredito.Designer.cs">
+      <DependentUpon>frm_excluirCredito.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_excluirDebito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_despesasPendentes.resx">
       <DependentUpon>frm_despesasPendentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_excluirCredito.resx">
+      <DependentUpon>frm_excluirCredito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_excluirDebito.resx">
       <DependentUpon>frm_excluirDebito.cs</DependentUpon>

@@ -490,6 +490,14 @@
             // 
             this.forma_pagamentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_PagarBindingSource, "forma_pagamento", true));
             this.forma_pagamentoComboBox.FormattingEnabled = true;
+            this.forma_pagamentoComboBox.Items.AddRange(new object[] {
+            "CARTAO DE CREDITO",
+            "CARTAO DE DEBITO",
+            "CHEQUE",
+            "DEPOSITO EM CONTA ",
+            "DINHEIRO",
+            "DUPLICATA",
+            "TRANSFERENCIA"});
             this.forma_pagamentoComboBox.Location = new System.Drawing.Point(200, 309);
             this.forma_pagamentoComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.forma_pagamentoComboBox.Name = "forma_pagamentoComboBox";
@@ -536,10 +544,14 @@
             // 
             this.situacaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_PagarBindingSource, "situacao", true));
             this.situacaoComboBox.FormattingEnabled = true;
+            this.situacaoComboBox.Items.AddRange(new object[] {
+            "PAGO",
+            "PENDENTE",
+            "VENCIDO"});
             this.situacaoComboBox.Location = new System.Drawing.Point(200, 573);
             this.situacaoComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.situacaoComboBox.Name = "situacaoComboBox";
-            this.situacaoComboBox.Size = new System.Drawing.Size(265, 25);
+            this.situacaoComboBox.Size = new System.Drawing.Size(160, 25);
             this.situacaoComboBox.TabIndex = 25;
             // 
             // shapeContainer1

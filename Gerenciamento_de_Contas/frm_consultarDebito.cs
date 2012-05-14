@@ -55,7 +55,7 @@ namespace Gerenciamento_de_Contas
             }
             else if (comboBox1.Text == "Status")
             {
-                this.contas_PagarTableAdapter.FillByPesquisaSituacao(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+                this.contas_PagarTableAdapter.FillByPesquisaSituacao(contas_DBDataSet.Contas_Pagar, textBox1.Text.ToUpper());
             }
         }
     }

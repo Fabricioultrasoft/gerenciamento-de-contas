@@ -39,3 +39,4 @@ E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gere
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_cadastrarCredito.resources
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_consultarCredito.resources
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_alterarCredito.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_excluirCredito.resources

@@ -45,7 +45,7 @@ namespace Gerenciamento_de_Contas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha ao ecluir o registro!" + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Falha ao excluir o registro! " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -53,13 +53,13 @@ namespace Gerenciamento_de_Contas
         {
             if (string.IsNullOrEmpty(textBox2.Text))
             {
-                MessageBox.Show("Informe o ID do débito a ser excluído!", "Excluir Débito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Informe o ID do débito a ser excluído!", "Excluir Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 excluir(Convert.ToInt32(textBox2.Text));
                 this.contas_PagarTableAdapter.Fill(this.contas_DBDataSet.Contas_Pagar);
-                MessageBox.Show("Débito exluído com sucesso!", "Ecluir Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Débito exluído com sucesso!", "Excluir Débito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 apagarTextBox();
             }
@@ -88,7 +88,7 @@ namespace Gerenciamento_de_Contas
             }
             else if (comboBox1.Text == "Status")
             {
-                this.contas_PagarTableAdapter.FillByPesquisaSituacao(contas_DBDataSet.Contas_Pagar, textBox1.Text);
+                this.contas_PagarTableAdapter.FillByPesquisaSituacao(contas_DBDataSet.Contas_Pagar, textBox1.Text.ToUpper());
             }
         }
     }
