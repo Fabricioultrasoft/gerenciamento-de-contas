@@ -67,7 +67,14 @@
     <Compile Include="DadosContasPagar.cs" />
     <Compile Include="DadosContasReceber.cs" />
     <Compile Include="DadosProjecoesPagar.cs" />
+    <Compile Include="DadosProjecoesReceber.cs" />
     <Compile Include="DadosUsuarios.cs" />
+    <Compile Include="frm_addProjCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_addProjCredito.Designer.cs">
+      <DependentUpon>frm_addProjCredito.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_addProjDebito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +135,12 @@
     <Compile Include="frm_excluirDebito.Designer.cs">
       <DependentUpon>frm_excluirDebito.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_excluirProjCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_excluirProjCredito.Designer.cs">
+      <DependentUpon>frm_excluirProjCredito.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_excluirProjDebito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +153,12 @@
     <Compile Include="frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_pesquisaRapida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pesquisaRapida.Designer.cs">
+      <DependentUpon>frm_pesquisaRapida.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +167,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_addProjCredito.resx">
+      <DependentUpon>frm_addProjCredito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_addProjDebito.resx">
       <DependentUpon>frm_addProjDebito.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,16 +200,23 @@
     <EmbeddedResource Include="frm_excluirDebito.resx">
       <DependentUpon>frm_excluirDebito.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_excluirProjCredito.resx">
+      <DependentUpon>frm_excluirProjCredito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_excluirProjDebito.resx">
       <DependentUpon>frm_excluirProjDebito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_pesquisaRapida.resx">
+      <DependentUpon>frm_pesquisaRapida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_principal.resx">
       <DependentUpon>frm_principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GraficoProjPagar.rdlc" />
+    <EmbeddedResource Include="GraficoProjReceber.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -211,6 +211,45 @@ FROM            Contas_Pagar</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarQuerySumPago" Modifier="Public" Name="ScalarQuerySumPago" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ScalarQuerySumPago">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(valor) AS Expr1
+FROM            Contas_Pagar
+WHERE        (situacao = 'PAGO')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarQuerySumPendetes" Modifier="Public" Name="ScalarQuerySumPendetes" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ScalarQuerySumPendetes">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(valor) AS Expr1
+FROM            Contas_Pagar
+WHERE        (situacao = 'PENDENTE')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarQuerySumValor" Modifier="Public" Name="ScalarQuerySumValor" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ScalarQuerySumValor">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(valor) AS Expr1
+FROM            Contas_Pagar</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarQuerySumVencido" Modifier="Public" Name="ScalarQuerySumVencido" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="ScalarQuerySumVencido">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(valor) AS Expr1
+FROM            Contas_Pagar
+WHERE        (situacao = 'VENCIDO')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
             </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Contas_ReceberTableAdapter" GeneratorDataComponentClassName="Contas_ReceberTableAdapter" Name="Contas_Receber" UserDataComponentName="Contas_ReceberTableAdapter">
@@ -391,6 +430,45 @@ WHERE        (CAST(valor AS varchar(20)) LIKE '%' + @valor)</CommandText>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        MAX(id) AS Expr1
 FROM            Contas_Receber</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarQuerySum" Modifier="Public" Name="ScalarQuerySum" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ScalarQuerySum">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(valor) AS Expr1
+FROM            Contas_Receber</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarQuerySumPagos" Modifier="Public" Name="ScalarQuerySumPagos" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ScalarQuerySumPagos">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(valor) AS Expr1
+FROM            Contas_Receber
+WHERE        (situacao = 'PAGO')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarQuerySumPendentes" Modifier="Public" Name="ScalarQuerySumPendentes" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ScalarQuerySumPendentes">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(valor) AS Expr1
+FROM            Contas_Receber
+WHERE        (situacao = 'PENDENTE')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarQuerySumVencidos" Modifier="Public" Name="ScalarQuerySumVencidos" QueryType="Scalar" ScalarCallRetval="System.Double, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="ScalarQuerySumVencidos">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(valor) AS Expr1
+FROM            Contas_Receber
+WHERE        (situacao = 'VENCIDO')</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -595,7 +673,20 @@ SELECT mes, valor FROM Projecoes_Receber WHERE (mes = @mes)</CommandText>
               <Mapping SourceColumn="mes" DataSetColumn="mes" />
               <Mapping SourceColumn="valor" DataSetColumn="valor" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="Contas_DBConnectionString (Settings)" DbObjectName="Contas_DB.dbo.Projecoes_Receber" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByPRSelectByMes" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByPRSelectByMes" GeneratorSourceName="FillByPRSelectByMes" GetMethodModifier="Public" GetMethodName="GetDataByPRSelectByMes" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByPRSelectByMes" UserSourceName="FillByPRSelectByMes">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        mes, valor
+FROM            Projecoes_Receber
+WHERE        (mes = @mes)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="mes" ColumnName="mes" DataSourceName="Contas_DB.dbo.Projecoes_Receber" DataTypeServer="varchar(10)" DbType="AnsiString" Direction="Input" ParameterName="@mes" Precision="0" ProviderType="VarChar" Scale="0" Size="10" SourceColumn="mes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuariosTableAdapter" GeneratorDataComponentClassName="UsuariosTableAdapter" Name="Usuarios" UserDataComponentName="UsuariosTableAdapter">
             <MainSource>

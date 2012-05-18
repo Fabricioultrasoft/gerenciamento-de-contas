@@ -43,7 +43,7 @@ namespace Gerenciamento_de_Contas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao salvar o registro! " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Falha ao salvar o registro! " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -64,21 +64,21 @@ namespace Gerenciamento_de_Contas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int resul = this.projecoes_PagarTableAdapter.FillByPPSelectByMes(contas_DBDataSet.Projecoes_Pagar, mesComboBox.Text);
+            //int resul = this.projecoes_PagarTableAdapter.FillByPPSelectByMes(contas_DBDataSet.Projecoes_Pagar, mesComboBox.Text);
             
             if (string.IsNullOrEmpty(mesComboBox.Text) || string.IsNullOrEmpty(valorTextBox.Text))
             {
                 MessageBox.Show("Preencha todos os campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (resul == 1)
-            {
-                if (MessageBox.Show("Projeção já existente! Deseja alterá-la?", "Projeção das Despesas", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    AlterarDados();
-                    frm_addProjDebito_Load(sender, e);
-                    MessageBox.Show("Projeção realizada com sucesso!", "Projeção das Despesas", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
+            //else if (resul == 1)
+            //{
+            //    if (MessageBox.Show("Projeção já existente! Deseja alterá-la?", "Projeção das Despesas", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            //    {
+            //        AlterarDados();
+            //        frm_addProjDebito_Load(sender, e);
+            //        MessageBox.Show("Projeção realizada com sucesso!", "Projeção das Despesas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
             else
             {
                 GravarDados();

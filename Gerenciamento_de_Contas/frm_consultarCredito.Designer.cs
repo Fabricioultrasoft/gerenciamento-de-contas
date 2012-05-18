@@ -37,6 +37,7 @@
             this.contas_ReceberDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 459);
+            this.panel1.Size = new System.Drawing.Size(1221, 456);
             this.panel1.TabIndex = 0;
             // 
             // comboBox1
@@ -79,7 +80,7 @@
             "Valor ",
             "Forma de Pagamento",
             "Status"});
-            this.comboBox1.Location = new System.Drawing.Point(656, 130);
+            this.comboBox1.Location = new System.Drawing.Point(745, 129);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(157, 25);
             this.comboBox1.TabIndex = 3;
@@ -87,7 +88,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(311, 130);
+            this.textBox1.Location = new System.Drawing.Point(400, 129);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(305, 23);
             this.textBox1.TabIndex = 2;
@@ -97,7 +98,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(187, 133);
+            this.label1.Location = new System.Drawing.Point(276, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 1;
@@ -110,6 +111,7 @@
             this.contas_ReceberDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
+            this.descricao,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn5,
@@ -123,7 +125,7 @@
             this.contas_ReceberDataGridView.DataSource = this.contas_ReceberBindingSource;
             this.contas_ReceberDataGridView.Location = new System.Drawing.Point(41, 193);
             this.contas_ReceberDataGridView.Name = "contas_ReceberDataGridView";
-            this.contas_ReceberDataGridView.Size = new System.Drawing.Size(938, 220);
+            this.contas_ReceberDataGridView.Size = new System.Drawing.Size(1139, 220);
             this.contas_ReceberDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -132,7 +134,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 40;
+            this.dataGridViewTextBoxColumn1.Width = 25;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -140,6 +142,13 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Devedor";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 180;
+            // 
+            // descricao
+            // 
+            this.descricao.DataPropertyName = "descricao";
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.Width = 200;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -209,7 +218,6 @@
             this.dataGridViewTextBoxColumn13.DataPropertyName = "situacao";
             this.dataGridViewTextBoxColumn13.HeaderText = "Status";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 80;
             // 
             // contas_ReceberBindingSource
             // 
@@ -240,7 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 459);
+            this.ClientSize = new System.Drawing.Size(1221, 456);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -265,8 +273,12 @@
         private Contas_DBDataSetTableAdapters.Contas_ReceberTableAdapter contas_ReceberTableAdapter;
         private Contas_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView contas_ReceberDataGridView;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
@@ -277,8 +289,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
     }
 }

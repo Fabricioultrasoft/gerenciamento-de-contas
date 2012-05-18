@@ -41,13 +41,13 @@ namespace Gerenciamento_de_Contas
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao excluir o registro! " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Falha ao excluir o registro! " + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void bt_excluir_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text))
+            if (string.IsNullOrEmpty(textBox1.Text))
             {
                 MessageBox.Show("Informe o mês da projeção a ser excluída!", "Excluir Projeção de Despesas", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -63,7 +63,7 @@ namespace Gerenciamento_de_Contas
 
         private void projecoes_PagarDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBox1.Text = Convert.ToString(projecoes_PagarDataGridView.CurrentCell.Value);
+            textBox1.Text = this.projecoes_PagarDataGridView.CurrentCell.Value.ToString();
         }
     }
 }
