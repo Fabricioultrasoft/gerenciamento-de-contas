@@ -37,6 +37,7 @@
             this.contas_PagarDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,14 +69,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1024, 459);
+            this.panel1.Size = new System.Drawing.Size(1222, 456);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(187, 133);
+            this.label1.Location = new System.Drawing.Point(276, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 17);
             this.label1.TabIndex = 3;
@@ -91,7 +92,7 @@
             "Forma de Pagamento",
             "Data de Emissão",
             "Status"});
-            this.comboBox1.Location = new System.Drawing.Point(656, 130);
+            this.comboBox1.Location = new System.Drawing.Point(743, 129);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(157, 25);
@@ -100,7 +101,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(310, 130);
+            this.textBox1.Location = new System.Drawing.Point(397, 129);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(305, 23);
@@ -113,6 +114,7 @@
             this.contas_PagarDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
+            this.descricao,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn5,
@@ -127,7 +129,7 @@
             this.contas_PagarDataGridView.Location = new System.Drawing.Point(41, 193);
             this.contas_PagarDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.contas_PagarDataGridView.Name = "contas_PagarDataGridView";
-            this.contas_PagarDataGridView.Size = new System.Drawing.Size(938, 220);
+            this.contas_PagarDataGridView.Size = new System.Drawing.Size(1143, 220);
             this.contas_PagarDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -136,7 +138,7 @@
             this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 40;
+            this.dataGridViewTextBoxColumn1.Width = 25;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -144,6 +146,14 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Credor";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 180;
+            // 
+            // descricao
+            // 
+            this.descricao.DataPropertyName = "descricao";
+            this.descricao.HeaderText = "Descrição";
+            this.descricao.Name = "descricao";
+            this.descricao.ReadOnly = true;
+            this.descricao.Width = 200;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -213,7 +223,6 @@
             this.dataGridViewTextBoxColumn13.DataPropertyName = "situacao";
             this.dataGridViewTextBoxColumn13.HeaderText = "Status";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.Width = 80;
             // 
             // contas_PagarBindingSource
             // 
@@ -244,7 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1024, 459);
+            this.ClientSize = new System.Drawing.Size(1222, 456);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -274,6 +283,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;

@@ -40,9 +40,9 @@ namespace Gerenciamento_de_Contas
                 string credor = credorTextBox.Text;
                 string descricao = descricaoTextBox.Text;
                 double valor = Convert.ToDouble(valorTextBox.Text);
-                DateTime data_emissao = Convert.ToDateTime(data_emissaoDateTimePicker.Text);
-                DateTime data_vencimento = Convert.ToDateTime(data_vencimentoDateTimePicker.Text);
-                DateTime data_pagamento = Convert.ToDateTime(data_pagamentoDateTimePicker.Text);
+                DateTime data_emissao = Convert.ToDateTime(data_emissaoDateTimePicker.Text).Date;
+                DateTime data_vencimento = Convert.ToDateTime(data_vencimentoDateTimePicker.Text).Date;
+                DateTime data_pagamento = Convert.ToDateTime(data_pagamentoDateTimePicker.Text).Date;
                 string forma_pagamento = forma_pagamentoComboBox.Text;
                 int multa = Convert.ToInt32(multaTextBox.Text);
                 int juros = Convert.ToInt32(jurosTextBox.Text);

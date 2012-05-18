@@ -43,8 +43,8 @@ namespace Gerenciamento_de_Contas
             {
                 using (SqlCommand Command = new SqlCommand(strUpdate, Connection))
                 {
-                    Command.Parameters.AddWithValue("@valor", valor);
                     Command.Parameters.AddWithValue("@mes", mes);
+                    Command.Parameters.AddWithValue("@valor", valor);
 
                     Connection.Open();
 

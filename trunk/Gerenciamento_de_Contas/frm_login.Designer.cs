@@ -111,7 +111,7 @@
             // bt_entrar
             // 
             this.bt_entrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.bt_entrar.Location = new System.Drawing.Point(168, 254);
+            this.bt_entrar.Location = new System.Drawing.Point(163, 252);
             this.bt_entrar.Name = "bt_entrar";
             this.bt_entrar.Size = new System.Drawing.Size(80, 30);
             this.bt_entrar.TabIndex = 4;
@@ -130,14 +130,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(415, 322);
+            this.panel1.Size = new System.Drawing.Size(407, 322);
             this.panel1.TabIndex = 5;
             // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 322);
+            this.ClientSize = new System.Drawing.Size(407, 322);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
