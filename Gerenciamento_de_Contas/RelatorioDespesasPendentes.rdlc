@@ -97,6 +97,9 @@
               <Width>0.8037in</Width>
             </TablixColumn>
             <TablixColumn>
+              <Width>1.53634in</Width>
+            </TablixColumn>
+            <TablixColumn>
               <Width>0.98425in</Width>
             </TablixColumn>
             <TablixColumn>
@@ -112,7 +115,7 @@
               <Width>0.72384in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.078in</Width>
+              <Width>1.203in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -256,6 +259,41 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>LightBlue</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox6">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Forma de Pagamento</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox6</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -615,6 +653,38 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="forma_pagamento">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!forma_pagamento.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>forma_pagamento</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="data_emissao">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -821,6 +891,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -846,7 +917,7 @@
         <Top>0.17639cm</Top>
         <Left>0.62653cm</Left>
         <Height>1.2cm</Height>
-        <Width>24.25918cm</Width>
+        <Width>28.47897cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -876,7 +947,7 @@
       </ValidValues>
     </ReportParameter>
   </ReportParameters>
-  <Width>10.08571in</Width>
+  <Width>11.72969in</Width>
   <Page>
     <PageHeader>
       <Height>1.905cm</Height>
@@ -915,7 +986,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox21</rd:DefaultName>
           <Top>0.67063cm</Top>
-          <Left>10.22556cm</Left>
+          <Left>11.97593cm</Left>
           <Height>0.70583cm</Height>
           <Width>5.59563cm</Width>
           <Style>

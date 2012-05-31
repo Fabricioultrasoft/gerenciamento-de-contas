@@ -18,7 +18,7 @@ namespace Gerenciamento_de_Contas
         string strDelete = "DELETE FROM Contas_Receber WHERE id = @id";
         string strSelectbyID = "SELECT * FROM Contas_Receber WHERE (CAST(id AS varchar(20)) LIKE '%' + @id)";
         string strUpdate = "UPDATE Contas_Receber SET devedor = @devedor, descricao = @descricao, valor = @valor, data_emissao = @data_emissao, data_vencimento = @data_vencimento, data_pagamento = @data_pagamento, forma_pagamento = @forma_pagamento, multa = @multa, juros = @juros, total_parcelas = @total_parcelas, valor_parcela = @valor_parcela, situacao = @situacao WHERE id = @id";
-
+        string strUpdateDate = "UPDATE Contas_Receber SET situacao = 'VENCIDO' WHERE data_pagamento > @data_pagamento AND situacao = 'PENDENTE'";
 
         public void Inserir(string devedor, string descricao, double valor, DateTime data_emissao, DateTime data_vencimento, DateTime data_pagamento, string forma_pagamento, int multa, int juros, int total_parcelas, double valor_parcela, string situacao)
         {
@@ -67,6 +67,23 @@ namespace Gerenciamento_de_Contas
                     Command.Parameters.AddWithValue("@total_parcelas", total_parcelas);
                     Command.Parameters.AddWithValue("@valor_parcela", valor_parcela);
                     Command.Parameters.AddWithValue("@situacao", situacao);
+
+                    Connection.Open();
+
+                    Command.ExecuteNonQuery();
+
+                    Connection.Close();
+                }
+            }
+        }
+
+        public void AtualizarDatas(DateTime data_pag)
+        {
+            using (SqlConnection Connection = new SqlConnection(strConnection))
+            {
+                using (SqlCommand Command = new SqlCommand(strUpdateDate, Connection))
+                {
+                    Command.Parameters.AddWithValue("@data_pagamento", data_pag);
 
                     Connection.Open();
 

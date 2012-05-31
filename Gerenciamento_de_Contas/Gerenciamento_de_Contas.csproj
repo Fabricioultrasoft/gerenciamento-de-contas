@@ -117,11 +117,23 @@
     <Compile Include="frm_consultarDebito.Designer.cs">
       <DependentUpon>frm_consultarDebito.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_despesasPagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_despesasPagas.Designer.cs">
+      <DependentUpon>frm_despesasPagas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_despesasPendentes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_despesasPendentes.Designer.cs">
       <DependentUpon>frm_despesasPendentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_despesasVencidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_despesasVencidas.Designer.cs">
+      <DependentUpon>frm_despesasVencidas.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_excluirCredito.cs">
       <SubType>Form</SubType>
@@ -147,23 +159,89 @@
     <Compile Include="frm_excluirProjDebito.Designer.cs">
       <DependentUpon>frm_excluirProjDebito.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_graficoDespesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_graficoDespesas.Designer.cs">
+      <DependentUpon>frm_graficoDespesas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_graficoProjecoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_graficoProjecoes.Designer.cs">
+      <DependentUpon>frm_graficoProjecoes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_pesquisaRapida.cs">
+    <Compile Include="frm_pesquisaRapidaDespesa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_pesquisaRapida.Designer.cs">
-      <DependentUpon>frm_pesquisaRapida.cs</DependentUpon>
+    <Compile Include="frm_pesquisaRapidaDespesa.Designer.cs">
+      <DependentUpon>frm_pesquisaRapidaDespesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pesquisaRapidaProjDespesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pesquisaRapidaProjDespesa.Designer.cs">
+      <DependentUpon>frm_pesquisaRapidaProjDespesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pesquisaRapidaProjReceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pesquisaRapidaProjReceita.Designer.cs">
+      <DependentUpon>frm_pesquisaRapidaProjReceita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_pesquisaRapidaReceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_pesquisaRapidaReceita.Designer.cs">
+      <DependentUpon>frm_pesquisaRapidaReceita.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_principal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_principal.Designer.cs">
       <DependentUpon>frm_principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_proximosVencimentosPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_proximosVencimentosPagar.Designer.cs">
+      <DependentUpon>frm_proximosVencimentosPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_receitasPagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_receitasPagas.Designer.cs">
+      <DependentUpon>frm_receitasPagas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_receitasPendentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_receitasPendentes.Designer.cs">
+      <DependentUpon>frm_receitasPendentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_receitasVencidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_receitasVencidas.Designer.cs">
+      <DependentUpon>frm_receitasVencidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_relatorioDespesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_relatorioDespesas.Designer.cs">
+      <DependentUpon>frm_relatorioDespesas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_relatorioReceitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_relatorioReceitas.Designer.cs">
+      <DependentUpon>frm_relatorioReceitas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -191,8 +269,14 @@
     <EmbeddedResource Include="frm_consultarDebito.resx">
       <DependentUpon>frm_consultarDebito.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_despesasPagas.resx">
+      <DependentUpon>frm_despesasPagas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_despesasPendentes.resx">
       <DependentUpon>frm_despesasPendentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_despesasVencidas.resx">
+      <DependentUpon>frm_despesasVencidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_excluirCredito.resx">
       <DependentUpon>frm_excluirCredito.cs</DependentUpon>
@@ -206,15 +290,50 @@
     <EmbeddedResource Include="frm_excluirProjDebito.resx">
       <DependentUpon>frm_excluirProjDebito.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_graficoDespesas.resx">
+      <DependentUpon>frm_graficoDespesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_graficoProjecoes.resx">
+      <DependentUpon>frm_graficoProjecoes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_pesquisaRapida.resx">
-      <DependentUpon>frm_pesquisaRapida.cs</DependentUpon>
+    <EmbeddedResource Include="frm_pesquisaRapidaDespesa.resx">
+      <DependentUpon>frm_pesquisaRapidaDespesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pesquisaRapidaProjDespesa.resx">
+      <DependentUpon>frm_pesquisaRapidaProjDespesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pesquisaRapidaProjReceita.resx">
+      <DependentUpon>frm_pesquisaRapidaProjReceita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_pesquisaRapidaReceita.resx">
+      <DependentUpon>frm_pesquisaRapidaReceita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_principal.resx">
       <DependentUpon>frm_principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_proximosVencimentosPagar.resx">
+      <DependentUpon>frm_proximosVencimentosPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_receitasPagas.resx">
+      <DependentUpon>frm_receitasPagas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_receitasPendentes.resx">
+      <DependentUpon>frm_receitasPendentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_receitasVencidas.resx">
+      <DependentUpon>frm_receitasVencidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_relatorioDespesas.resx">
+      <DependentUpon>frm_relatorioDespesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_relatorioReceitas.resx">
+      <DependentUpon>frm_relatorioReceitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraficoDespesasByMes.rdlc" />
+    <EmbeddedResource Include="GraficoDespesasBySituacao.rdlc" />
     <EmbeddedResource Include="GraficoProjPagar.rdlc" />
     <EmbeddedResource Include="GraficoProjReceber.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -227,7 +346,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RelatorioDespesas.rdlc" />
+    <EmbeddedResource Include="RelatorioDespesasPagas.rdlc" />
     <EmbeddedResource Include="RelatorioDespesasPendentes.rdlc" />
+    <EmbeddedResource Include="RelatorioDespesasVencidas.rdlc" />
+    <EmbeddedResource Include="RelatorioReceitas.rdlc" />
+    <EmbeddedResource Include="RelatorioReceitasPagas.rdlc" />
+    <EmbeddedResource Include="RelatorioReceitasPendentes.rdlc" />
+    <EmbeddedResource Include="RelatorioReceitasVencidas.rdlc" />
     <None Include="app.config" />
     <None Include="Contas_DBDataSet.xsc">
       <DependentUpon>Contas_DBDataSet.xsd</DependentUpon>

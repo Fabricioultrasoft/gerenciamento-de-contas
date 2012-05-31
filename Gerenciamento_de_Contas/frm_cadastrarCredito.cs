@@ -80,7 +80,7 @@ namespace Gerenciamento_de_Contas
 
         private void bt_salvar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(devedorTextBox.Text) || string.IsNullOrEmpty(valorTextBox.Text) || string.IsNullOrEmpty(forma_pagamentoComboBox.Text) || string.IsNullOrEmpty(situacaoComboBox.Text))
+            if (string.IsNullOrEmpty(devedorTextBox.Text) || string.IsNullOrEmpty(valorTextBox.Text) || string.IsNullOrEmpty(forma_pagamentoComboBox.Text) || string.IsNullOrEmpty(situacaoComboBox.Text) || string.IsNullOrEmpty(multaTextBox.Text) || string.IsNullOrEmpty(jurosTextBox.Text) || string.IsNullOrEmpty(total_parcelasTextBox.Text) || string.IsNullOrEmpty(valor_parcelaTextBox.Text))
             {
                 MessageBox.Show("Peencha todos os campos indicados!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }

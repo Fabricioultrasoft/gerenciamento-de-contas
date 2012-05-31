@@ -170,41 +170,41 @@
             // 
             multaLabel.AutoSize = true;
             multaLabel.BackColor = System.Drawing.Color.Transparent;
-            multaLabel.Location = new System.Drawing.Point(153, 308);
+            multaLabel.Location = new System.Drawing.Point(140, 308);
             multaLabel.Name = "multaLabel";
-            multaLabel.Size = new System.Drawing.Size(42, 17);
+            multaLabel.Size = new System.Drawing.Size(55, 17);
             multaLabel.TabIndex = 16;
-            multaLabel.Text = "Multa";
+            multaLabel.Text = "Multa  *";
             // 
             // jurosLabel
             // 
             jurosLabel.AutoSize = true;
             jurosLabel.BackColor = System.Drawing.Color.Transparent;
-            jurosLabel.Location = new System.Drawing.Point(476, 308);
+            jurosLabel.Location = new System.Drawing.Point(463, 307);
             jurosLabel.Name = "jurosLabel";
-            jurosLabel.Size = new System.Drawing.Size(43, 17);
+            jurosLabel.Size = new System.Drawing.Size(56, 17);
             jurosLabel.TabIndex = 18;
-            jurosLabel.Text = "Juros";
+            jurosLabel.Text = "Juros  *";
             // 
             // total_parcelasLabel
             // 
             total_parcelasLabel.AutoSize = true;
             total_parcelasLabel.BackColor = System.Drawing.Color.Transparent;
-            total_parcelasLabel.Location = new System.Drawing.Point(79, 337);
+            total_parcelasLabel.Location = new System.Drawing.Point(66, 337);
             total_parcelasLabel.Name = "total_parcelasLabel";
-            total_parcelasLabel.Size = new System.Drawing.Size(119, 17);
+            total_parcelasLabel.Size = new System.Drawing.Size(132, 17);
             total_parcelasLabel.TabIndex = 20;
-            total_parcelasLabel.Text = "Total de Parcelas";
+            total_parcelasLabel.Text = "Total de Parcelas  *";
             // 
             // valor_parcelaLabel
             // 
             valor_parcelaLabel.AutoSize = true;
             valor_parcelaLabel.BackColor = System.Drawing.Color.Transparent;
-            valor_parcelaLabel.Location = new System.Drawing.Point(377, 337);
+            valor_parcelaLabel.Location = new System.Drawing.Point(361, 337);
             valor_parcelaLabel.Name = "valor_parcelaLabel";
-            valor_parcelaLabel.Size = new System.Drawing.Size(113, 17);
+            valor_parcelaLabel.Size = new System.Drawing.Size(126, 17);
             valor_parcelaLabel.TabIndex = 22;
-            valor_parcelaLabel.Text = "Valor da Parcela";
+            valor_parcelaLabel.Text = "Valor da Parcela  *";
             // 
             // situacaoLabel
             // 
@@ -387,6 +387,8 @@
             // 
             // forma_pagamentoComboBox
             // 
+            this.forma_pagamentoComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.forma_pagamentoComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.forma_pagamentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_ReceberBindingSource, "forma_pagamento", true));
             this.forma_pagamentoComboBox.FormattingEnabled = true;
             this.forma_pagamentoComboBox.Items.AddRange(new object[] {
@@ -436,6 +438,8 @@
             // 
             // situacaoComboBox
             // 
+            this.situacaoComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.situacaoComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.situacaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_ReceberBindingSource, "situacao", true));
             this.situacaoComboBox.FormattingEnabled = true;
             this.situacaoComboBox.Items.AddRange(new object[] {

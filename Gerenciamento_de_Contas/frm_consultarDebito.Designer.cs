@@ -69,7 +69,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1222, 456);
+            this.panel1.Size = new System.Drawing.Size(1222, 601);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -84,6 +84,8 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "ID",
@@ -129,7 +131,7 @@
             this.contas_PagarDataGridView.Location = new System.Drawing.Point(41, 193);
             this.contas_PagarDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.contas_PagarDataGridView.Name = "contas_PagarDataGridView";
-            this.contas_PagarDataGridView.Size = new System.Drawing.Size(1143, 220);
+            this.contas_PagarDataGridView.Size = new System.Drawing.Size(1143, 368);
             this.contas_PagarDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -253,7 +255,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 456);
+            this.ClientSize = new System.Drawing.Size(1222, 601);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

@@ -16,17 +16,6 @@ namespace Gerenciamento_de_Contas
             InitializeComponent();
         }
 
-        DateTime data_hora;
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            data_hora = DateTime.Now;
-            String data = String.Format("{0:d}", data_hora);
-            String hora = data_hora.ToLongTimeString();
-            lb_status1.Text = data;
-            lb_status2.Text = hora;
-        }
-
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frm_cadastrarDebito().ShowDialog();
@@ -92,6 +81,51 @@ namespace Gerenciamento_de_Contas
             new frm_excluirProjCredito().ShowDialog();
         }
 
+        private void projeçõesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new frm_graficoProjecoes().ShowDialog();
+        }
+
+        private void despesasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new frm_relatorioDespesas().ShowDialog();
+        }
+
+        private void receitasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_relatorioReceitas().ShowDialog();
+        }
+
+        private void despesasToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            new frm_graficoDespesas().ShowDialog();
+        }
+
+        private void despesasVencidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_despesasVencidas().ShowDialog();
+        }
+
+        private void despesasPagasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_despesasPagas().ShowDialog();
+        }
+
+        private void receitasPagasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_receitasPagas().ShowDialog();
+        }
+
+        private void receitasPendentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_receitasPendentes().ShowDialog();
+        }
+
+        private void receitasVencidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_receitasVencidas().ShowDialog();
+        }
+
         private void frm_principal_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'Contas_DBDataSet.Contas_Receber' table. You can move, or remove it, as needed.
@@ -101,43 +135,142 @@ namespace Gerenciamento_de_Contas
 
             SumValorPagar();
             SumValorReceber();
+            Saldos();
         }
 
         public void SumValorPagar()
         {
-            lb_pendentes.Text = this.Contas_PagarTableAdapter.ScalarQuerySumPendetes().ToString();
-            lb_pagos.Text = this.Contas_PagarTableAdapter.ScalarQuerySumPago().ToString();
-            lb_vencidos.Text = this.Contas_PagarTableAdapter.ScalarQuerySumVencido().ToString();
-            lb_total.Text = this.Contas_PagarTableAdapter.ScalarQuerySumValor().ToString();
+            try
+            {
+                lb_pendentes.Text = addVirgula(this.Contas_PagarTableAdapter.ScalarQuerySumPendetes().ToString());
+                lb_pagos.Text = addVirgula(this.Contas_PagarTableAdapter.ScalarQuerySumPago().ToString());
+                lb_vencidos.Text = addVirgula(this.Contas_PagarTableAdapter.ScalarQuerySumVencido().ToString());
+                lb_total.Text = addVirgula(this.Contas_PagarTableAdapter.ScalarQuerySumValor().ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao atualizar os dados! " + ex, "Atualizar Débitos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void SumValorReceber()
         {
-            lb_pendentes2.Text = this.contas_ReceberTableAdapter.ScalarQuerySumPendentes().ToString();
-            lb_pagos2.Text = this.contas_ReceberTableAdapter.ScalarQuerySumPagos().ToString();
-            lb_vencidos2.Text = this.contas_ReceberTableAdapter.ScalarQuerySumVencidos().ToString();
-            lb_total2.Text = this.contas_ReceberTableAdapter.ScalarQuerySum().ToString();
+            try
+            {
+                lb_pendentes2.Text = addVirgula(this.contas_ReceberTableAdapter.ScalarQuerySumPendentes().ToString());
+                lb_pagos2.Text = addVirgula(this.contas_ReceberTableAdapter.ScalarQuerySumPagos().ToString());
+                lb_vencidos2.Text = addVirgula(this.contas_ReceberTableAdapter.ScalarQuerySumVencidos().ToString());
+                lb_total2.Text = addVirgula(this.contas_ReceberTableAdapter.ScalarQuerySum().ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao atualizar os dados! " + ex, "Atualizar Receitas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void Saldos()
+        {
+            try
+            {
+                lb_s_pendentes.Text = addVirgula((Convert.ToDouble(this.contas_ReceberTableAdapter.ScalarQuerySumPendentes()) - Convert.ToDouble(this.Contas_PagarTableAdapter.ScalarQuerySumPendetes())).ToString());
+                lb_s_pagos.Text = addVirgula((Convert.ToDouble(this.contas_ReceberTableAdapter.ScalarQuerySumPagos()) - Convert.ToDouble(this.Contas_PagarTableAdapter.ScalarQuerySumPago())).ToString());
+                lb_s_vencidos.Text = addVirgula((Convert.ToDouble(this.contas_ReceberTableAdapter.ScalarQuerySumVencidos()) - Convert.ToDouble(this.Contas_PagarTableAdapter.ScalarQuerySumVencido())).ToString());
+                lb_s_total.Text = addVirgula((Convert.ToDouble(this.contas_ReceberTableAdapter.ScalarQuerySum()) - Convert.ToDouble(this.Contas_PagarTableAdapter.ScalarQuerySumValor())).ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao atualizar os dados! " + ex, "Atualizar Saldos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void bt_atualizar_Click(object sender, EventArgs e)
         {
             SumValorPagar();
+            MessageBox.Show("Valores atualizados com sucesso!", "Atualizar Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void bt_atualizar2_Click(object sender, EventArgs e)
         {
             SumValorReceber();
+            MessageBox.Show("Valores atualizados com sucesso!", "Atualizar Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void bt_atualizar_saldos_Click(object sender, EventArgs e)
+        {
+            Saldos();
+            MessageBox.Show("Valores atualizados com sucesso!", "Atualizar Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        public bool formatoValor(string label)
+        {
+            bool formato = false;
+
+            for (int i = 0; i < label.Length; i++)
+            {
+                if (label[i].ToString() == ",")
+                {
+                    formato = true;
+                }
+            }
+
+            return formato;
+        }
+
+        public string addVirgula(string label)
+        {
+            if (formatoValor(label) == false)
+            {
+                label = label + ",00";
+            }
+
+            return label;
+        }
+
+        DateTime data_atual = DateTime.Now;
+
+        public void AtualizarDatasPagar()
+        {
+            try
+            {
+                DadosContasPagar Dados = new DadosContasPagar();
+                Dados.AtualizarDatas(data_atual);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao atualizar o registro! " + ex, "Atualizar Datas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void AtualizarDatasReceber()
+        {
+            try
+            {
+                DadosContasReceber Dados = new DadosContasReceber();
+                Dados.AtualizarDatas(data_atual);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao atualizar o registro! " + ex, "Atualizar Datas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void bt_buscar_Click(object sender, EventArgs e)
         {
             if (rbt_credito.Checked == true)
             {
-                new frm_pesquisaRapida(true, textBox1.Text, comboBox1.Text).ShowDialog();
+                new frm_pesquisaRapidaReceita(textBox1.Text, comboBox1.Text).ShowDialog();
             }
             else if (rbt_debito.Checked == true)
             {
-                new frm_pesquisaRapida(false, textBox1.Text, comboBox1.Text).ShowDialog();
+                new frm_pesquisaRapidaDespesa(textBox1.Text, comboBox1.Text).ShowDialog();
+            }
+            else if (rbt_projecoesdespesas.Checked == true)
+            {
+                new frm_pesquisaRapidaProjDespesa(textBox1.Text, comboBox1.Text).ShowDialog();
+            }
+            else if (rbt_projecoesreceitas.Checked == true)
+            {
+                new frm_pesquisaRapidaProjReceita(textBox1.Text, comboBox1.Text).ShowDialog();
             }
             else if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(comboBox1.Text))
             {
@@ -147,6 +280,23 @@ namespace Gerenciamento_de_Contas
             {
                 MessageBox.Show("Selecione uma opção!", "Pesquisa Rápida", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AtualizarDatasPagar();
+            MessageBox.Show("Datas atualizadas com sucesso!", "Atualizar Datas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AtualizarDatasReceber();
+            MessageBox.Show("Datas atualizadas com sucesso!", "Atualizar Datas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void bt_proximosVencimentosPagar_Click(object sender, EventArgs e)
+        {
+            new frm_proximosVencimentosPagar().ShowDialog();
         }
     }
 }

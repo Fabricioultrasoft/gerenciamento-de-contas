@@ -109,6 +109,8 @@
             // 
             // mesComboBox
             // 
+            this.mesComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.mesComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.mesComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projecoes_PagarBindingSource, "mes", true));
             this.mesComboBox.FormattingEnabled = true;
             this.mesComboBox.Items.AddRange(new object[] {

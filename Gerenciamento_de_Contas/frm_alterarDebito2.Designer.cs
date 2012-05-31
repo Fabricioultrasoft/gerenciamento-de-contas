@@ -185,45 +185,45 @@
             // 
             multaLabel.AutoSize = true;
             multaLabel.BackColor = System.Drawing.Color.Transparent;
-            multaLabel.Location = new System.Drawing.Point(152, 438);
+            multaLabel.Location = new System.Drawing.Point(137, 438);
             multaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             multaLabel.Name = "multaLabel";
-            multaLabel.Size = new System.Drawing.Size(42, 17);
+            multaLabel.Size = new System.Drawing.Size(55, 17);
             multaLabel.TabIndex = 16;
-            multaLabel.Text = "Multa";
+            multaLabel.Text = "Multa  *";
             // 
             // jurosLabel
             // 
             jurosLabel.AutoSize = true;
             jurosLabel.BackColor = System.Drawing.Color.Transparent;
-            jurosLabel.Location = new System.Drawing.Point(472, 438);
+            jurosLabel.Location = new System.Drawing.Point(459, 438);
             jurosLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             jurosLabel.Name = "jurosLabel";
-            jurosLabel.Size = new System.Drawing.Size(43, 17);
+            jurosLabel.Size = new System.Drawing.Size(56, 17);
             jurosLabel.TabIndex = 18;
-            jurosLabel.Text = "Juros";
+            jurosLabel.Text = "Juros  *";
             // 
             // total_parcelasLabel
             // 
             total_parcelasLabel.AutoSize = true;
             total_parcelasLabel.BackColor = System.Drawing.Color.Transparent;
-            total_parcelasLabel.Location = new System.Drawing.Point(73, 469);
+            total_parcelasLabel.Location = new System.Drawing.Point(60, 469);
             total_parcelasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             total_parcelasLabel.Name = "total_parcelasLabel";
-            total_parcelasLabel.Size = new System.Drawing.Size(119, 17);
+            total_parcelasLabel.Size = new System.Drawing.Size(132, 17);
             total_parcelasLabel.TabIndex = 20;
-            total_parcelasLabel.Text = "Total de Parcelas";
+            total_parcelasLabel.Text = "Total de Parcelas  *";
             // 
             // valor_parcelaLabel
             // 
             valor_parcelaLabel.AutoSize = true;
             valor_parcelaLabel.BackColor = System.Drawing.Color.Transparent;
-            valor_parcelaLabel.Location = new System.Drawing.Point(371, 469);
+            valor_parcelaLabel.Location = new System.Drawing.Point(358, 469);
             valor_parcelaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             valor_parcelaLabel.Name = "valor_parcelaLabel";
-            valor_parcelaLabel.Size = new System.Drawing.Size(113, 17);
+            valor_parcelaLabel.Size = new System.Drawing.Size(126, 17);
             valor_parcelaLabel.TabIndex = 22;
-            valor_parcelaLabel.Text = "Valor da Parcela";
+            valor_parcelaLabel.Text = "Valor da Parcela  *";
             // 
             // situacaoLabel
             // 
@@ -347,6 +347,8 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "ID",
@@ -488,6 +490,8 @@
             // 
             // forma_pagamentoComboBox
             // 
+            this.forma_pagamentoComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.forma_pagamentoComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.forma_pagamentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_PagarBindingSource, "forma_pagamento", true));
             this.forma_pagamentoComboBox.FormattingEnabled = true;
             this.forma_pagamentoComboBox.Items.AddRange(new object[] {
@@ -542,6 +546,8 @@
             // 
             // situacaoComboBox
             // 
+            this.situacaoComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.situacaoComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.situacaoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_PagarBindingSource, "situacao", true));
             this.situacaoComboBox.FormattingEnabled = true;
             this.situacaoComboBox.Items.AddRange(new object[] {

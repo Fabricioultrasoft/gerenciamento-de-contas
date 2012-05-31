@@ -15,10 +15,11 @@ namespace Gerenciamento_de_Contas
 
         //SQL strings
         string strInsert = "INSERT INTO Contas_Pagar (credor, descricao, valor, data_emissao, data_vencimento, data_pagamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao) VALUES (@credor, @descricao, @valor, @data_emissao, @data_vencimento, @data_pagamento, @forma_pagamento, @multa, @juros, @total_parcelas, @valor_parcela, @situacao)";
+        string strInsertContaPendente = "INSERT INTO Contas_Pagar (credor, descricao, valor, data_emissao, data_vencimento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao) VALUES (@credor, @descricao, @valor, @data_emissao, @data_vencimento, @forma_pagamento, @multa, @juros, @total_parcelas, @valor_parcela, @situacao)";
         string strDelete = "DELETE FROM Contas_Pagar WHERE id = @id";
         string strSelectbyID = "SELECT * FROM Contas_Pagar WHERE (CAST(id AS varchar(20)) LIKE '%' + @id)";
         string strUpdate = "UPDATE Contas_Pagar SET credor = @credor, descricao = @descricao, valor = @valor, data_emissao = @data_emissao, data_vencimento = @data_vencimento, data_pagamento = @data_pagamento, forma_pagamento = @forma_pagamento, multa = @multa, juros = @juros, total_parcelas = @total_parcelas, valor_parcela = @valor_parcela, situacao = @situacao WHERE id = @id";
-
+        string strUpdateDate = "UPDATE Contas_Pagar SET situacao = 'VENCIDO' WHERE data_pagamento > @data_pagamento AND situacao = 'PENDENTE'";
 
         public void Inserir(string credor, string descricao, double valor, DateTime data_emissao, DateTime data_vencimento, DateTime data_pagamento, string forma_pagamento, int multa, int juros, int total_parcelas, double valor_parcela, string situacao)
         {
@@ -32,6 +33,33 @@ namespace Gerenciamento_de_Contas
                     Command.Parameters.AddWithValue("@data_emissao", data_emissao);
                     Command.Parameters.AddWithValue("@data_vencimento", data_vencimento);
                     Command.Parameters.AddWithValue("@data_pagamento", data_pagamento);
+                    Command.Parameters.AddWithValue("@forma_pagamento", forma_pagamento);
+                    Command.Parameters.AddWithValue("@multa", multa);
+                    Command.Parameters.AddWithValue("@juros", juros);
+                    Command.Parameters.AddWithValue("@total_parcelas", total_parcelas);
+                    Command.Parameters.AddWithValue("@valor_parcela", valor_parcela);
+                    Command.Parameters.AddWithValue("@situacao", situacao);
+
+                    Connection.Open();
+
+                    Command.ExecuteNonQuery();
+
+                    Connection.Close();
+                }
+            }
+        }
+
+        public void InserirContaPendente(string credor, string descricao, double valor, DateTime data_emissao, DateTime data_vencimento, string forma_pagamento, int multa, int juros, int total_parcelas, double valor_parcela, string situacao)
+        {
+            using (SqlConnection Connection = new SqlConnection(strConnection))
+            {
+                using (SqlCommand Command = new SqlCommand(strInsertContaPendente, Connection))
+                {
+                    Command.Parameters.AddWithValue("@credor", credor);
+                    Command.Parameters.AddWithValue("@descricao", descricao);
+                    Command.Parameters.AddWithValue("@valor", valor);
+                    Command.Parameters.AddWithValue("@data_emissao", data_emissao);
+                    Command.Parameters.AddWithValue("@data_vencimento", data_vencimento);
                     Command.Parameters.AddWithValue("@forma_pagamento", forma_pagamento);
                     Command.Parameters.AddWithValue("@multa", multa);
                     Command.Parameters.AddWithValue("@juros", juros);
@@ -67,6 +95,23 @@ namespace Gerenciamento_de_Contas
                     Command.Parameters.AddWithValue("@total_parcelas", total_parcelas);
                     Command.Parameters.AddWithValue("@valor_parcela", valor_parcela);
                     Command.Parameters.AddWithValue("@situacao", situacao);
+
+                    Connection.Open();
+
+                    Command.ExecuteNonQuery();
+
+                    Connection.Close();
+                }
+            }
+        }
+
+        public void AtualizarDatas(DateTime data_pag)
+        {
+            using (SqlConnection Connection = new SqlConnection(strConnection))
+            {
+                using (SqlCommand Command = new SqlCommand(strUpdateDate, Connection))
+                {
+                    Command.Parameters.AddWithValue("@data_pagamento", data_pag);
 
                     Connection.Open();
 
