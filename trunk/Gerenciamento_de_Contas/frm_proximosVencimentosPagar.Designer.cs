@@ -1,6 +1,6 @@
 ﻿namespace Gerenciamento_de_Contas
 {
-    partial class frm_pesquisaRapida
+    partial class frm_proximosVencimentosPagar
     {
         /// <summary>
         /// Required designer variable.
@@ -47,27 +47,9 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contas_ReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.contas_ReceberTableAdapter = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.Contas_ReceberTableAdapter();
-            this.contas_ReceberDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.contas_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contas_PagarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contas_PagarDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contas_ReceberBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contas_ReceberDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // contas_DBDataSet
@@ -114,9 +96,9 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.contas_PagarDataGridView.DataSource = this.contas_PagarBindingSource;
-            this.contas_PagarDataGridView.Location = new System.Drawing.Point(29, 81);
+            this.contas_PagarDataGridView.Location = new System.Drawing.Point(37, 98);
             this.contas_PagarDataGridView.Name = "contas_PagarDataGridView";
-            this.contas_PagarDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.contas_PagarDataGridView.Size = new System.Drawing.Size(771, 220);
             this.contas_PagarDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -198,137 +180,22 @@
             this.dataGridViewTextBoxColumn13.HeaderText = "situacao";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
-            // contas_ReceberBindingSource
-            // 
-            this.contas_ReceberBindingSource.DataMember = "Contas_Receber";
-            this.contas_ReceberBindingSource.DataSource = this.contas_DBDataSet;
-            // 
-            // contas_ReceberTableAdapter
-            // 
-            this.contas_ReceberTableAdapter.ClearBeforeFill = true;
-            // 
-            // contas_ReceberDataGridView
-            // 
-            this.contas_ReceberDataGridView.AutoGenerateColumns = false;
-            this.contas_ReceberDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.contas_ReceberDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn14,
-            this.dataGridViewTextBoxColumn15,
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22,
-            this.dataGridViewTextBoxColumn23,
-            this.dataGridViewTextBoxColumn24,
-            this.dataGridViewTextBoxColumn25,
-            this.dataGridViewTextBoxColumn26});
-            this.contas_ReceberDataGridView.DataSource = this.contas_ReceberBindingSource;
-            this.contas_ReceberDataGridView.Location = new System.Drawing.Point(368, 160);
-            this.contas_ReceberDataGridView.Name = "contas_ReceberDataGridView";
-            this.contas_ReceberDataGridView.Size = new System.Drawing.Size(300, 220);
-            this.contas_ReceberDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn14.HeaderText = "id";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn15
-            // 
-            this.dataGridViewTextBoxColumn15.DataPropertyName = "devedor";
-            this.dataGridViewTextBoxColumn15.HeaderText = "devedor";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "descricao";
-            this.dataGridViewTextBoxColumn16.HeaderText = "descricao";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "valor";
-            this.dataGridViewTextBoxColumn17.HeaderText = "valor";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "data_emissao";
-            this.dataGridViewTextBoxColumn18.HeaderText = "data_emissao";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "data_vencimento";
-            this.dataGridViewTextBoxColumn19.HeaderText = "data_vencimento";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "data_pagamento";
-            this.dataGridViewTextBoxColumn20.HeaderText = "data_pagamento";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "forma_pagamento";
-            this.dataGridViewTextBoxColumn21.HeaderText = "forma_pagamento";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "multa";
-            this.dataGridViewTextBoxColumn22.HeaderText = "multa";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // dataGridViewTextBoxColumn23
-            // 
-            this.dataGridViewTextBoxColumn23.DataPropertyName = "juros";
-            this.dataGridViewTextBoxColumn23.HeaderText = "juros";
-            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // dataGridViewTextBoxColumn24
-            // 
-            this.dataGridViewTextBoxColumn24.DataPropertyName = "total_parcelas";
-            this.dataGridViewTextBoxColumn24.HeaderText = "total_parcelas";
-            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
-            // 
-            // dataGridViewTextBoxColumn25
-            // 
-            this.dataGridViewTextBoxColumn25.DataPropertyName = "valor_parcela";
-            this.dataGridViewTextBoxColumn25.HeaderText = "valor_parcela";
-            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
-            // 
-            // dataGridViewTextBoxColumn26
-            // 
-            this.dataGridViewTextBoxColumn26.DataPropertyName = "situacao";
-            this.dataGridViewTextBoxColumn26.HeaderText = "situacao";
-            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
-            // 
-            // frm_pesquisaRapida
+            // frm_proximosVencimentosPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 400);
-            this.Controls.Add(this.contas_ReceberDataGridView);
+            this.ClientSize = new System.Drawing.Size(850, 387);
             this.Controls.Add(this.contas_PagarDataGridView);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frm_pesquisaRapida";
+            this.Name = "frm_proximosVencimentosPagar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_pesquisaRapida";
-            this.Load += new System.EventHandler(this.frm_pesquisaRapida_Load);
+            this.Text = "frm_proximosVencimentosPagar";
+            this.Load += new System.EventHandler(this.frm_proximosVencimentosPagar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.contas_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contas_PagarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contas_PagarDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contas_ReceberBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.contas_ReceberDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -353,21 +220,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.BindingSource contas_ReceberBindingSource;
-        private Contas_DBDataSetTableAdapters.Contas_ReceberTableAdapter contas_ReceberTableAdapter;
-        private System.Windows.Forms.DataGridView contas_ReceberDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
     }
 }

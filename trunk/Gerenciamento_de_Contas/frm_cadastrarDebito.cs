@@ -49,9 +49,17 @@ namespace Gerenciamento_de_Contas
                 int total_parcelas = Convert.ToInt32(total_parcelasTextBox.Text);
                 double valor_parcela = Convert.ToDouble(valor_parcelaTextBox.Text);
                 string situacao = situacaoComboBox.Text;
-
+                
                 DadosContasPagar Dados = new DadosContasPagar();
-                Dados.Inserir(credor, descricao, valor, data_emissao, data_vencimento, data_pagamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao);
+
+                if (situacaoComboBox.Text == "PAGO")
+                {
+                    Dados.Inserir(credor, descricao, valor, data_emissao, data_vencimento, data_pagamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao);
+                }
+                else
+                {
+                    Dados.InserirContaPendente(credor, descricao, valor, data_emissao, data_vencimento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao);
+                }
             }
             catch (Exception ex)
             {
@@ -61,7 +69,7 @@ namespace Gerenciamento_de_Contas
 
         private void bt_salvar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(credorTextBox.Text) || string.IsNullOrEmpty(valorTextBox.Text) || string.IsNullOrEmpty(forma_pagamentoComboBox.Text) || string.IsNullOrEmpty(situacaoComboBox.Text))
+            if (string.IsNullOrEmpty(credorTextBox.Text) || string.IsNullOrEmpty(valorTextBox.Text) || string.IsNullOrEmpty(forma_pagamentoComboBox.Text) || string.IsNullOrEmpty(situacaoComboBox.Text) || string.IsNullOrEmpty(multaTextBox.Text) || string.IsNullOrEmpty(jurosTextBox.Text) || string.IsNullOrEmpty(total_parcelasTextBox.Text) || string.IsNullOrEmpty(valor_parcelaTextBox.Text))
             {
                 MessageBox.Show("Peencha todos os campos indicados!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -90,6 +98,20 @@ namespace Gerenciamento_de_Contas
             total_parcelasTextBox.Text = null;
             valor_parcelaTextBox.Text = null;
             situacaoComboBox.Text = null;
+        }
+
+        private void situacaoComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (situacaoComboBox.Text == "PAGO")
+            {
+                lb_datapag.Visible = true;
+                data_pagamentoDateTimePicker.Visible = true;
+            }
+            else
+            {
+                lb_datapag.Visible = false;
+                data_pagamentoDateTimePicker.Visible = false;
+            }
         }
     }
 }

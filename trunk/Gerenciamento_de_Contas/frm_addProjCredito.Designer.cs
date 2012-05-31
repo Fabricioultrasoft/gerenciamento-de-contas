@@ -54,6 +54,7 @@
             // mesLabel
             // 
             mesLabel.AutoSize = true;
+            mesLabel.BackColor = System.Drawing.Color.Transparent;
             mesLabel.Location = new System.Drawing.Point(36, 167);
             mesLabel.Name = "mesLabel";
             mesLabel.Size = new System.Drawing.Size(34, 17);
@@ -63,6 +64,7 @@
             // valorLabel
             // 
             valorLabel.AutoSize = true;
+            valorLabel.BackColor = System.Drawing.Color.Transparent;
             valorLabel.Location = new System.Drawing.Point(36, 198);
             valorLabel.Name = "valorLabel";
             valorLabel.Size = new System.Drawing.Size(41, 17);
@@ -128,6 +130,8 @@
             // 
             // mesComboBox
             // 
+            this.mesComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.mesComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.mesComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projecoes_ReceberBindingSource, "mes", true));
             this.mesComboBox.FormattingEnabled = true;
             this.mesComboBox.Items.AddRange(new object[] {

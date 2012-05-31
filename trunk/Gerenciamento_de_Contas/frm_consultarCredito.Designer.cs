@@ -68,11 +68,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1221, 456);
+            this.panel1.Size = new System.Drawing.Size(1221, 601);
             this.panel1.TabIndex = 0;
             // 
             // comboBox1
             // 
+            this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "ID",
@@ -125,7 +127,7 @@
             this.contas_ReceberDataGridView.DataSource = this.contas_ReceberBindingSource;
             this.contas_ReceberDataGridView.Location = new System.Drawing.Point(41, 193);
             this.contas_ReceberDataGridView.Name = "contas_ReceberDataGridView";
-            this.contas_ReceberDataGridView.Size = new System.Drawing.Size(1139, 220);
+            this.contas_ReceberDataGridView.Size = new System.Drawing.Size(1139, 368);
             this.contas_ReceberDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -248,7 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1221, 456);
+            this.ClientSize = new System.Drawing.Size(1221, 601);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
