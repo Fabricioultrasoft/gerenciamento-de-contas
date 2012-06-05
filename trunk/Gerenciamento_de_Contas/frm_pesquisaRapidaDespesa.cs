@@ -38,22 +38,26 @@ namespace Gerenciamento_de_Contas
         {
             // TODO: This line of code loads data into the 'contas_DBDataSet.Contas_Pagar' table. You can move, or remove it, as needed.
             this.contas_PagarTableAdapter.Fill(this.contas_DBDataSet.Contas_Pagar);
-            Procurar(tipo, valor);
+            Filtrar(tipo, valor);
         }
 
-        public void Procurar(string tipo, string valor_tb)
+        public void Filtrar(string tipo, string valor_tb)
         {
             if (tipo == "ID")
             {
                 this.contas_PagarTableAdapter.FillByPesquisaCodigo(contas_DBDataSet.Contas_Pagar, valor_tb);
             }
-            else if (tipo == "Credor | Devedor")
+            else if (tipo == "Credor")
             {
                 this.contas_PagarTableAdapter.FillByPesquisaCredor(contas_DBDataSet.Contas_Pagar, valor_tb);
             }
             else if (tipo == "Valor")
             {
                 this.contas_PagarTableAdapter.FillByPesquisaValor(contas_DBDataSet.Contas_Pagar, valor_tb);
+            }
+            else if (tipo == "Situação")
+            {
+                this.contas_PagarTableAdapter.FillByPesquisaSituacao(contas_DBDataSet.Contas_Pagar, valor_tb);
             }
         }
     }

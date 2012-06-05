@@ -23,6 +23,7 @@ namespace Gerenciamento_de_Contas
         {
             this.valor = valor;
             this.tipo = tipo;
+            InitializeComponent();
         }
     
         private void projecoes_ReceberBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -37,7 +38,20 @@ namespace Gerenciamento_de_Contas
         {
             // TODO: This line of code loads data into the 'contas_DBDataSet.Projecoes_Receber' table. You can move, or remove it, as needed.
             this.projecoes_ReceberTableAdapter.Fill(this.contas_DBDataSet.Projecoes_Receber);
+            Filtrar(tipo, valor);
+            this.reportViewer1.RefreshReport();
+        }
 
+        public void Filtrar(string tipo, string valor)
+        {
+            if (tipo == "Mês")
+            {
+                this.projecoes_ReceberTableAdapter.FillByPesquisaMes(contas_DBDataSet.Projecoes_Receber, valor.ToUpper());
+            }
+            else if (tipo == "Valor")
+            {
+                this.projecoes_ReceberTableAdapter.FillByPesquisaValor(contas_DBDataSet.Projecoes_Receber, valor);
+            }
         }
     }
 }

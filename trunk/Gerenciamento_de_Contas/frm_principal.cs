@@ -186,19 +186,21 @@ namespace Gerenciamento_de_Contas
         private void bt_atualizar_Click(object sender, EventArgs e)
         {
             SumValorPagar();
-            MessageBox.Show("Valores atualizados com sucesso!", "Atualizar Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            AtualizarDatasPagar();
+            MessageBox.Show("Despesas atualizadas com sucesso!", "Atualizar Despesas", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void bt_atualizar2_Click(object sender, EventArgs e)
         {
             SumValorReceber();
-            MessageBox.Show("Valores atualizados com sucesso!", "Atualizar Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            AtualizarDatasReceber();
+            MessageBox.Show("Receitas atualizadas com sucesso!", "Atualizar Receitas", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void bt_atualizar_saldos_Click(object sender, EventArgs e)
         {
             Saldos();
-            MessageBox.Show("Valores atualizados com sucesso!", "Atualizar Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Atualização realizada com sucesso!", "Atualizar Valores", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public bool formatoValor(string label)
@@ -282,21 +284,37 @@ namespace Gerenciamento_de_Contas
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            AtualizarDatasPagar();
-            MessageBox.Show("Datas atualizadas com sucesso!", "Atualizar Datas", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            AtualizarDatasReceber();
-            MessageBox.Show("Datas atualizadas com sucesso!", "Atualizar Datas", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void bt_proximosVencimentosPagar_Click(object sender, EventArgs e)
         {
             new frm_proximosVencimentosPagar().ShowDialog();
+        }
+
+        string[] opcoesdespesa = new string[6] {"ID", "Credor", "Valor", "Status", "Data de Emissão", "Data de Vencimento"};
+        string[] opcoesreceita = new string[6] { "ID", "Devedor", "Valor", "Status", "Data de Emissão", "Data de Vencimento"};
+        string[] opcoesprojecoes = new string[2] {"Mês", "Valor"};
+
+        private void rbt_debito_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(opcoesdespesa);
+        }
+
+        private void rbt_credito_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(opcoesreceita);
+        }
+
+        private void rbt_projecoesdespesas_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(opcoesprojecoes);
+        }
+
+        private void rbt_projecoesreceitas_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(opcoesprojecoes);
         }
     }
 }

@@ -75,6 +75,7 @@
             // 
             this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "ID",
@@ -125,9 +126,9 @@
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
             this.contas_ReceberDataGridView.DataSource = this.contas_ReceberBindingSource;
-            this.contas_ReceberDataGridView.Location = new System.Drawing.Point(41, 193);
+            this.contas_ReceberDataGridView.Location = new System.Drawing.Point(39, 193);
             this.contas_ReceberDataGridView.Name = "contas_ReceberDataGridView";
-            this.contas_ReceberDataGridView.Size = new System.Drawing.Size(1139, 368);
+            this.contas_ReceberDataGridView.Size = new System.Drawing.Size(1143, 368);
             this.contas_ReceberDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1

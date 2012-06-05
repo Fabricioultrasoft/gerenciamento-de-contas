@@ -91,7 +91,6 @@
             this.shapeContainer3 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.bt_proximosVencimentosPagar = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -109,7 +108,6 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -130,6 +128,7 @@
             this.contas_ReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.contas_ReceberTableAdapter = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.Contas_ReceberTableAdapter();
             this.tableAdapterManager = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.TableAdapterManager();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Contas_PagarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Contas_DBDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -486,22 +485,24 @@
             this.rbt_projecoesreceitas.AutoSize = true;
             this.rbt_projecoesreceitas.Location = new System.Drawing.Point(43, 123);
             this.rbt_projecoesreceitas.Name = "rbt_projecoesreceitas";
-            this.rbt_projecoesreceitas.Size = new System.Drawing.Size(175, 21);
+            this.rbt_projecoesreceitas.Size = new System.Drawing.Size(137, 17);
             this.rbt_projecoesreceitas.TabIndex = 6;
             this.rbt_projecoesreceitas.TabStop = true;
             this.rbt_projecoesreceitas.Text = "Projeções das Receitas";
             this.rbt_projecoesreceitas.UseVisualStyleBackColor = true;
+            this.rbt_projecoesreceitas.Click += new System.EventHandler(this.rbt_projecoesreceitas_Click);
             // 
             // rbt_projecoesdespesas
             // 
             this.rbt_projecoesdespesas.AutoSize = true;
             this.rbt_projecoesdespesas.Location = new System.Drawing.Point(43, 87);
             this.rbt_projecoesdespesas.Name = "rbt_projecoesdespesas";
-            this.rbt_projecoesdespesas.Size = new System.Drawing.Size(183, 21);
+            this.rbt_projecoesdespesas.Size = new System.Drawing.Size(142, 17);
             this.rbt_projecoesdespesas.TabIndex = 5;
             this.rbt_projecoesdespesas.TabStop = true;
             this.rbt_projecoesdespesas.Text = "Projeções das Despesas";
             this.rbt_projecoesdespesas.UseVisualStyleBackColor = true;
+            this.rbt_projecoesdespesas.Click += new System.EventHandler(this.rbt_projecoesdespesas_Click);
             // 
             // bt_buscar
             // 
@@ -517,13 +518,8 @@
             // 
             this.comboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.comboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "ID",
-            "Credor | Devedor",
-            "Valor",
-            "Data de Emissão",
-            "Data de Vencimento"});
             this.comboBox1.Location = new System.Drawing.Point(43, 229);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(169, 25);
@@ -541,22 +537,24 @@
             this.rbt_debito.AutoSize = true;
             this.rbt_debito.Location = new System.Drawing.Point(43, 51);
             this.rbt_debito.Name = "rbt_debito";
-            this.rbt_debito.Size = new System.Drawing.Size(82, 21);
+            this.rbt_debito.Size = new System.Drawing.Size(67, 17);
             this.rbt_debito.TabIndex = 1;
             this.rbt_debito.TabStop = true;
             this.rbt_debito.Text = "Despesa";
             this.rbt_debito.UseVisualStyleBackColor = true;
+            this.rbt_debito.Click += new System.EventHandler(this.rbt_debito_Click);
             // 
             // rbt_credito
             // 
             this.rbt_credito.AutoSize = true;
             this.rbt_credito.Location = new System.Drawing.Point(190, 48);
             this.rbt_credito.Name = "rbt_credito";
-            this.rbt_credito.Size = new System.Drawing.Size(74, 21);
+            this.rbt_credito.Size = new System.Drawing.Size(62, 17);
             this.rbt_credito.TabIndex = 0;
             this.rbt_credito.TabStop = true;
             this.rbt_credito.Text = "Receita";
             this.rbt_credito.UseVisualStyleBackColor = true;
+            this.rbt_credito.Click += new System.EventHandler(this.rbt_credito_Click);
             // 
             // groupBox3
             // 
@@ -584,11 +582,11 @@
             // 
             // bt_atualizar_saldos
             // 
-            this.bt_atualizar_saldos.Location = new System.Drawing.Point(77, 241);
+            this.bt_atualizar_saldos.Location = new System.Drawing.Point(107, 241);
             this.bt_atualizar_saldos.Name = "bt_atualizar_saldos";
-            this.bt_atualizar_saldos.Size = new System.Drawing.Size(132, 30);
+            this.bt_atualizar_saldos.Size = new System.Drawing.Size(73, 30);
             this.bt_atualizar_saldos.TabIndex = 12;
-            this.bt_atualizar_saldos.Text = "Atualizar Valores";
+            this.bt_atualizar_saldos.Text = "Atualizar";
             this.bt_atualizar_saldos.UseVisualStyleBackColor = true;
             this.bt_atualizar_saldos.Click += new System.EventHandler(this.bt_atualizar_saldos_Click);
             // 
@@ -722,7 +720,6 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.bt_proximosVencimentosPagar);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
@@ -740,20 +737,10 @@
             this.groupBox2.Controls.Add(this.shapeContainer1);
             this.groupBox2.Location = new System.Drawing.Point(41, 125);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(287, 419);
+            this.groupBox2.Size = new System.Drawing.Size(287, 366);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Despesas";
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(87, 357);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 30);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Atualizar Datas";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // bt_proximosVencimentosPagar
             // 
@@ -803,11 +790,11 @@
             // 
             // bt_atualizar
             // 
-            this.bt_atualizar.Location = new System.Drawing.Point(77, 241);
+            this.bt_atualizar.Location = new System.Drawing.Point(107, 241);
             this.bt_atualizar.Name = "bt_atualizar";
-            this.bt_atualizar.Size = new System.Drawing.Size(132, 30);
+            this.bt_atualizar.Size = new System.Drawing.Size(73, 30);
             this.bt_atualizar.TabIndex = 9;
-            this.bt_atualizar.Text = "Atualizar Valores";
+            this.bt_atualizar.Text = "Atualizar";
             this.bt_atualizar.UseVisualStyleBackColor = true;
             this.bt_atualizar.Click += new System.EventHandler(this.bt_atualizar_Click);
             // 
@@ -890,7 +877,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(281, 400);
+            this.shapeContainer1.Size = new System.Drawing.Size(281, 347);
             this.shapeContainer1.TabIndex = 4;
             this.shapeContainer1.TabStop = false;
             // 
@@ -905,7 +892,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
@@ -923,20 +909,10 @@
             this.groupBox1.Controls.Add(this.shapeContainer2);
             this.groupBox1.Location = new System.Drawing.Point(364, 125);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(287, 419);
+            this.groupBox1.Size = new System.Drawing.Size(287, 366);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Receitas";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(87, 357);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(113, 30);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Atualizar Datas";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -985,11 +961,11 @@
             // 
             // bt_atualizar2
             // 
-            this.bt_atualizar2.Location = new System.Drawing.Point(77, 241);
+            this.bt_atualizar2.Location = new System.Drawing.Point(107, 241);
             this.bt_atualizar2.Name = "bt_atualizar2";
-            this.bt_atualizar2.Size = new System.Drawing.Size(132, 30);
+            this.bt_atualizar2.Size = new System.Drawing.Size(73, 30);
             this.bt_atualizar2.TabIndex = 10;
-            this.bt_atualizar2.Text = "Atualizar Valores";
+            this.bt_atualizar2.Text = "Atualizar";
             this.bt_atualizar2.UseVisualStyleBackColor = true;
             this.bt_atualizar2.Click += new System.EventHandler(this.bt_atualizar2_Click);
             // 
@@ -1072,7 +1048,7 @@
             this.shapeContainer2.Name = "shapeContainer2";
             this.shapeContainer2.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape2});
-            this.shapeContainer2.Size = new System.Drawing.Size(281, 400);
+            this.shapeContainer2.Size = new System.Drawing.Size(281, 347);
             this.shapeContainer2.TabIndex = 4;
             this.shapeContainer2.TabStop = false;
             // 
@@ -1107,6 +1083,10 @@
             this.tableAdapterManager.Projecoes_ReceberTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
             // 
             // frm_principal
             // 
@@ -1242,9 +1222,8 @@
         private System.Windows.Forms.ToolStripMenuItem receitasPagasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem receitasPendentesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem receitasVencidasToolStripMenuItem;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.RadioButton rbt_projecoesreceitas;
         private System.Windows.Forms.RadioButton rbt_projecoesdespesas;
+        private System.Windows.Forms.Timer timer1;
     }
 }
