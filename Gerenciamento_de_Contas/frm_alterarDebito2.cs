@@ -108,6 +108,7 @@ namespace Gerenciamento_de_Contas
 
         public void apagarTextBox()
         {
+            idTextBox.Text = null;
             credorTextBox.Text = null;
             descricaoTextBox.Text = null;
             valorTextBox.Text = null;

@@ -29,16 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_pesquisaRapidaProjDespesa));
             this.contas_DBDataSet = new Gerenciamento_de_Contas.Contas_DBDataSet();
             this.projecoes_PagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.projecoes_PagarTableAdapter = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.Projecoes_PagarTableAdapter();
             this.tableAdapterManager = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.TableAdapterManager();
             this.projecoes_PagarDataGridView = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.contas_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projecoes_PagarBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.projecoes_PagarDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // contas_DBDataSet
@@ -74,35 +77,53 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.projecoes_PagarDataGridView.DataSource = this.projecoes_PagarBindingSource;
-            this.projecoes_PagarDataGridView.Location = new System.Drawing.Point(188, 110);
+            this.projecoes_PagarDataGridView.Location = new System.Drawing.Point(52, 119);
+            this.projecoes_PagarDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.projecoes_PagarDataGridView.Name = "projecoes_PagarDataGridView";
-            this.projecoes_PagarDataGridView.Size = new System.Drawing.Size(300, 220);
+            this.projecoes_PagarDataGridView.Size = new System.Drawing.Size(234, 226);
             this.projecoes_PagarDataGridView.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.projecoes_PagarDataGridView);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(765, 397);
+            this.panel1.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "mes";
-            this.dataGridViewTextBoxColumn1.HeaderText = "mes";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mês";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 120;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "valor";
-            this.dataGridViewTextBoxColumn2.HeaderText = "valor";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Valor";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 70;
             // 
             // frm_pesquisaRapidaProjDespesa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 350);
-            this.Controls.Add(this.projecoes_PagarDataGridView);
+            this.ClientSize = new System.Drawing.Size(765, 397);
+            this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_pesquisaRapidaProjDespesa";
-            this.Text = "frm_pesquisaRapidaProjDespesa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_pesquisaRapidaProjDespesa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.contas_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projecoes_PagarBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.projecoes_PagarDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -114,6 +135,7 @@
         private Contas_DBDataSetTableAdapters.Projecoes_PagarTableAdapter projecoes_PagarTableAdapter;
         private Contas_DBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView projecoes_PagarDataGridView;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }

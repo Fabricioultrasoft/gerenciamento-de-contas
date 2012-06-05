@@ -19,10 +19,11 @@ namespace Gerenciamento_de_Contas
         string valor;
         string tipo;
 
-        public frm_pesquisaRapidaReceita(string valor, string tipo)
+        public frm_pesquisaRapidaReceita(string valor2, string tipo2)
         {
-            this.valor = valor;
-            this.tipo = tipo;
+            this.valor = valor2;
+            this.tipo = tipo2;
+            InitializeComponent();
         }
 
         private void contas_ReceberBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -37,7 +38,34 @@ namespace Gerenciamento_de_Contas
         {
             // TODO: This line of code loads data into the 'contas_DBDataSet.Contas_Receber' table. You can move, or remove it, as needed.
             this.contas_ReceberTableAdapter.Fill(this.contas_DBDataSet.Contas_Receber);
+            Filtar(valor, tipo);
+        }
 
+        public void Filtar(string valor_tb, string tipo)
+        {
+            try
+            {
+                if (tipo == "ID")
+                {
+                    this.contas_ReceberTableAdapter.FillByPesquisaCodigo(contas_DBDataSet.Contas_Receber, valor_tb);
+                }
+                else if (tipo == "Devedor")
+                {
+                    this.contas_ReceberTableAdapter.FillByPesquisaDevedor(contas_DBDataSet.Contas_Receber, valor_tb);
+                }
+                else if (tipo == "Valor")
+                {
+                    this.contas_ReceberTableAdapter.FillByPesquisaValor(contas_DBDataSet.Contas_Receber, valor_tb);
+                }
+                else if (tipo == "Situação")
+                {
+                    this.contas_ReceberTableAdapter.FillByPesquisaSituacao(contas_DBDataSet.Contas_Receber, valor_tb);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao filtrar os registros!" + ex, "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

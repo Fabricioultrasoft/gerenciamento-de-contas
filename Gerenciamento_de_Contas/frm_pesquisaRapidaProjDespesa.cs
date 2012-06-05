@@ -23,6 +23,7 @@ namespace Gerenciamento_de_Contas
         {
             this.valor = valor;
             this.tipo = tipo;
+            InitializeComponent();
         }
 
         private void projecoes_PagarBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -37,7 +38,19 @@ namespace Gerenciamento_de_Contas
         {
             // TODO: This line of code loads data into the 'contas_DBDataSet.Projecoes_Pagar' table. You can move, or remove it, as needed.
             this.projecoes_PagarTableAdapter.Fill(this.contas_DBDataSet.Projecoes_Pagar);
+            Filtar(tipo, valor);
+        }
 
+        public void Filtar(string tipo, string valor)
+        {
+            if (tipo == "Mês")
+            {
+                this.projecoes_PagarTableAdapter.FillByPesquisaMes(contas_DBDataSet.Projecoes_Pagar, valor.ToUpper());
+            }
+            else if (tipo == "Valor")
+            {
+                this.projecoes_PagarTableAdapter.FillByPesquisaValor(contas_DBDataSet.Projecoes_Pagar, valor);
+            }
         }
     }
 }
