@@ -183,6 +183,7 @@
             this.ClientSize = new System.Drawing.Size(662, 396);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frm_addProjCredito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_addProjCredito_Load);

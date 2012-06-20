@@ -56,3 +56,6 @@ E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gere
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_pesquisaRapidaProjDespesa.resources
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_pesquisaRapidaProjReceita.resources
 E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_pesquisaRapidaReceita.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_proximosVencimentosReceber.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_prioridadesCobranca.resources
+E:\Users\Aldo\Documents\Visual Studio 2010\Projects\Gerenciamento_de_Contas\Gerenciamento_de_Contas\obj\x86\Debug\Gerenciamento_de_Contas.frm_prioridadesPagamento.resources

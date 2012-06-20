@@ -316,5 +316,20 @@ namespace Gerenciamento_de_Contas
             comboBox1.Items.Clear();
             comboBox1.Items.AddRange(opcoesprojecoes);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new frm_proximosVencimentosReceber().ShowDialog();
+        }
+
+        private void prioridadesDePagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_prioridadesPagamento().ShowDialog();
+        }
+
+        private void prioridadesDeCobrançaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frm_prioridadesCobranca().ShowDialog();
+        }
     }
 }

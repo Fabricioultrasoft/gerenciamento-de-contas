@@ -32,34 +32,34 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_graficoProjecoes));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.Projecoes_PagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Contas_DBDataSet = new Gerenciamento_de_Contas.Contas_DBDataSet();
             this.Projecoes_ReceberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Contas_DBDataSet = new Gerenciamento_de_Contas.Contas_DBDataSet();
+            this.Projecoes_PagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Projecoes_PagarTableAdapter = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.Projecoes_PagarTableAdapter();
             this.Projecoes_ReceberTableAdapter = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.Projecoes_ReceberTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.Projecoes_PagarBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Contas_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Projecoes_ReceberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Contas_DBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Projecoes_PagarBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Projecoes_PagarBindingSource
+            // Projecoes_ReceberBindingSource
             // 
-            this.Projecoes_PagarBindingSource.DataMember = "Projecoes_Pagar";
-            this.Projecoes_PagarBindingSource.DataSource = this.Contas_DBDataSet;
+            this.Projecoes_ReceberBindingSource.DataMember = "Projecoes_Receber";
+            this.Projecoes_ReceberBindingSource.DataSource = this.Contas_DBDataSet;
             // 
             // Contas_DBDataSet
             // 
             this.Contas_DBDataSet.DataSetName = "Contas_DBDataSet";
             this.Contas_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Projecoes_ReceberBindingSource
+            // Projecoes_PagarBindingSource
             // 
-            this.Projecoes_ReceberBindingSource.DataMember = "Projecoes_Receber";
-            this.Projecoes_ReceberBindingSource.DataSource = this.Contas_DBDataSet;
+            this.Projecoes_PagarBindingSource.DataMember = "Projecoes_Pagar";
+            this.Projecoes_PagarBindingSource.DataSource = this.Contas_DBDataSet;
             // 
             // panel1
             // 
@@ -114,12 +114,13 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frm_graficoProjecoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_graficoProjecoes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Projecoes_PagarBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Contas_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Projecoes_ReceberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Contas_DBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Projecoes_PagarBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

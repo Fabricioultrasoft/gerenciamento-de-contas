@@ -28,17 +28,18 @@ namespace Gerenciamento_de_Contas
         {
             // TODO: This line of code loads data into the 'contas_DBDataSet.Contas_Pagar' table. You can move, or remove it, as needed.
             this.contas_PagarTableAdapter.Fill(this.contas_DBDataSet.Contas_Pagar);
+
             SelecionarPorData();
             OrdenarPorData();
         }
 
-        string data_atual = DateTime.Now.ToString();
+        DateTime data_atual = DateTime.Now;      
         
         public void SelecionarPorData()
         {
             try
             {
-                this.contas_PagarTableAdapter.FillByFiltrarDataVencimento(contas_DBDataSet.Contas_Pagar, data_atual);
+                this.contas_PagarBindingSource.Filter = "data_vencimento >= '" + data_atual + "' AND situacao = 'PENDENTE'";
             }
             catch (Exception ex)
             {

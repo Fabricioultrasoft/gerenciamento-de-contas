@@ -35,7 +35,6 @@
             System.Windows.Forms.Label valorLabel;
             System.Windows.Forms.Label data_emissaoLabel;
             System.Windows.Forms.Label data_vencimentoLabel;
-            System.Windows.Forms.Label data_pagamentoLabel;
             System.Windows.Forms.Label forma_pagamentoLabel;
             System.Windows.Forms.Label multaLabel;
             System.Windows.Forms.Label jurosLabel;
@@ -67,13 +66,13 @@
             this.situacaoComboBox = new System.Windows.Forms.ComboBox();
             this.contas_ReceberTableAdapter = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.Contas_ReceberTableAdapter();
             this.tableAdapterManager = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.TableAdapterManager();
+            this.lb_datapag = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             devedorLabel = new System.Windows.Forms.Label();
             descricaoLabel = new System.Windows.Forms.Label();
             valorLabel = new System.Windows.Forms.Label();
             data_emissaoLabel = new System.Windows.Forms.Label();
             data_vencimentoLabel = new System.Windows.Forms.Label();
-            data_pagamentoLabel = new System.Windows.Forms.Label();
             forma_pagamentoLabel = new System.Windows.Forms.Label();
             multaLabel = new System.Windows.Forms.Label();
             jurosLabel = new System.Windows.Forms.Label();
@@ -110,7 +109,7 @@
             // 
             descricaoLabel.AutoSize = true;
             descricaoLabel.BackColor = System.Drawing.Color.Transparent;
-            descricaoLabel.Location = new System.Drawing.Point(127, 366);
+            descricaoLabel.Location = new System.Drawing.Point(127, 338);
             descricaoLabel.Name = "descricaoLabel";
             descricaoLabel.Size = new System.Drawing.Size(71, 17);
             descricaoLabel.TabIndex = 4;
@@ -146,16 +145,6 @@
             data_vencimentoLabel.TabIndex = 10;
             data_vencimentoLabel.Text = "Data de Vencimento";
             // 
-            // data_pagamentoLabel
-            // 
-            data_pagamentoLabel.AutoSize = true;
-            data_pagamentoLabel.BackColor = System.Drawing.Color.Transparent;
-            data_pagamentoLabel.Location = new System.Drawing.Point(61, 281);
-            data_pagamentoLabel.Name = "data_pagamentoLabel";
-            data_pagamentoLabel.Size = new System.Drawing.Size(134, 17);
-            data_pagamentoLabel.TabIndex = 12;
-            data_pagamentoLabel.Text = "Data de Pagamento";
-            // 
             // forma_pagamentoLabel
             // 
             forma_pagamentoLabel.AutoSize = true;
@@ -170,7 +159,7 @@
             // 
             multaLabel.AutoSize = true;
             multaLabel.BackColor = System.Drawing.Color.Transparent;
-            multaLabel.Location = new System.Drawing.Point(140, 308);
+            multaLabel.Location = new System.Drawing.Point(140, 280);
             multaLabel.Name = "multaLabel";
             multaLabel.Size = new System.Drawing.Size(55, 17);
             multaLabel.TabIndex = 16;
@@ -180,7 +169,7 @@
             // 
             jurosLabel.AutoSize = true;
             jurosLabel.BackColor = System.Drawing.Color.Transparent;
-            jurosLabel.Location = new System.Drawing.Point(463, 307);
+            jurosLabel.Location = new System.Drawing.Point(463, 279);
             jurosLabel.Name = "jurosLabel";
             jurosLabel.Size = new System.Drawing.Size(56, 17);
             jurosLabel.TabIndex = 18;
@@ -190,7 +179,7 @@
             // 
             total_parcelasLabel.AutoSize = true;
             total_parcelasLabel.BackColor = System.Drawing.Color.Transparent;
-            total_parcelasLabel.Location = new System.Drawing.Point(66, 337);
+            total_parcelasLabel.Location = new System.Drawing.Point(66, 309);
             total_parcelasLabel.Name = "total_parcelasLabel";
             total_parcelasLabel.Size = new System.Drawing.Size(132, 17);
             total_parcelasLabel.TabIndex = 20;
@@ -200,7 +189,7 @@
             // 
             valor_parcelaLabel.AutoSize = true;
             valor_parcelaLabel.BackColor = System.Drawing.Color.Transparent;
-            valor_parcelaLabel.Location = new System.Drawing.Point(361, 337);
+            valor_parcelaLabel.Location = new System.Drawing.Point(361, 309);
             valor_parcelaLabel.Name = "valor_parcelaLabel";
             valor_parcelaLabel.Size = new System.Drawing.Size(126, 17);
             valor_parcelaLabel.TabIndex = 22;
@@ -210,7 +199,7 @@
             // 
             situacaoLabel.AutoSize = true;
             situacaoLabel.BackColor = System.Drawing.Color.Transparent;
-            situacaoLabel.Location = new System.Drawing.Point(134, 440);
+            situacaoLabel.Location = new System.Drawing.Point(134, 412);
             situacaoLabel.Name = "situacaoLabel";
             situacaoLabel.Size = new System.Drawing.Size(61, 17);
             situacaoLabel.TabIndex = 24;
@@ -219,6 +208,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.lb_datapag);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -237,7 +227,6 @@
             this.panel1.Controls.Add(this.data_emissaoDateTimePicker);
             this.panel1.Controls.Add(data_vencimentoLabel);
             this.panel1.Controls.Add(this.data_vencimentoDateTimePicker);
-            this.panel1.Controls.Add(data_pagamentoLabel);
             this.panel1.Controls.Add(this.data_pagamentoDateTimePicker);
             this.panel1.Controls.Add(forma_pagamentoLabel);
             this.panel1.Controls.Add(this.forma_pagamentoComboBox);
@@ -261,7 +250,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(493, 337);
+            this.label4.Location = new System.Drawing.Point(493, 309);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 17);
             this.label4.TabIndex = 31;
@@ -271,7 +260,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(634, 307);
+            this.label3.Location = new System.Drawing.Point(634, 279);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(20, 17);
             this.label3.TabIndex = 30;
@@ -281,7 +270,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(201, 308);
+            this.label2.Location = new System.Drawing.Point(201, 280);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 17);
             this.label2.TabIndex = 29;
@@ -347,7 +336,7 @@
             // descricaoTextBox
             // 
             this.descricaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_ReceberBindingSource, "descricao", true));
-            this.descricaoTextBox.Location = new System.Drawing.Point(204, 363);
+            this.descricaoTextBox.Location = new System.Drawing.Point(204, 335);
             this.descricaoTextBox.Multiline = true;
             this.descricaoTextBox.Name = "descricaoTextBox";
             this.descricaoTextBox.Size = new System.Drawing.Size(450, 68);
@@ -380,10 +369,11 @@
             // data_pagamentoDateTimePicker
             // 
             this.data_pagamentoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.contas_ReceberBindingSource, "data_pagamento", true));
-            this.data_pagamentoDateTimePicker.Location = new System.Drawing.Point(204, 276);
+            this.data_pagamentoDateTimePicker.Location = new System.Drawing.Point(204, 440);
             this.data_pagamentoDateTimePicker.Name = "data_pagamentoDateTimePicker";
             this.data_pagamentoDateTimePicker.Size = new System.Drawing.Size(282, 23);
             this.data_pagamentoDateTimePicker.TabIndex = 13;
+            this.data_pagamentoDateTimePicker.Visible = false;
             // 
             // forma_pagamentoComboBox
             // 
@@ -407,7 +397,7 @@
             // multaTextBox
             // 
             this.multaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_ReceberBindingSource, "multa", true));
-            this.multaTextBox.Location = new System.Drawing.Point(233, 304);
+            this.multaTextBox.Location = new System.Drawing.Point(233, 276);
             this.multaTextBox.Name = "multaTextBox";
             this.multaTextBox.Size = new System.Drawing.Size(100, 23);
             this.multaTextBox.TabIndex = 17;
@@ -415,7 +405,7 @@
             // jurosTextBox
             // 
             this.jurosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_ReceberBindingSource, "juros", true));
-            this.jurosTextBox.Location = new System.Drawing.Point(525, 305);
+            this.jurosTextBox.Location = new System.Drawing.Point(525, 277);
             this.jurosTextBox.Name = "jurosTextBox";
             this.jurosTextBox.Size = new System.Drawing.Size(100, 23);
             this.jurosTextBox.TabIndex = 19;
@@ -423,7 +413,7 @@
             // total_parcelasTextBox
             // 
             this.total_parcelasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_ReceberBindingSource, "total_parcelas", true));
-            this.total_parcelasTextBox.Location = new System.Drawing.Point(204, 334);
+            this.total_parcelasTextBox.Location = new System.Drawing.Point(204, 306);
             this.total_parcelasTextBox.Name = "total_parcelasTextBox";
             this.total_parcelasTextBox.Size = new System.Drawing.Size(80, 23);
             this.total_parcelasTextBox.TabIndex = 21;
@@ -431,7 +421,7 @@
             // valor_parcelaTextBox
             // 
             this.valor_parcelaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.contas_ReceberBindingSource, "valor_parcela", true));
-            this.valor_parcelaTextBox.Location = new System.Drawing.Point(525, 334);
+            this.valor_parcelaTextBox.Location = new System.Drawing.Point(525, 306);
             this.valor_parcelaTextBox.Name = "valor_parcelaTextBox";
             this.valor_parcelaTextBox.Size = new System.Drawing.Size(100, 23);
             this.valor_parcelaTextBox.TabIndex = 23;
@@ -447,10 +437,11 @@
             "PAGO",
             "PENDENTE",
             "VENCIDO"});
-            this.situacaoComboBox.Location = new System.Drawing.Point(204, 437);
+            this.situacaoComboBox.Location = new System.Drawing.Point(204, 409);
             this.situacaoComboBox.Name = "situacaoComboBox";
             this.situacaoComboBox.Size = new System.Drawing.Size(160, 25);
             this.situacaoComboBox.TabIndex = 25;
+            this.situacaoComboBox.SelectedValueChanged += new System.EventHandler(this.situacaoComboBox_SelectedValueChanged);
             // 
             // contas_ReceberTableAdapter
             // 
@@ -467,6 +458,17 @@
             this.tableAdapterManager.UpdateOrder = Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuariosTableAdapter = null;
             // 
+            // lb_datapag
+            // 
+            this.lb_datapag.AutoSize = true;
+            this.lb_datapag.BackColor = System.Drawing.Color.Transparent;
+            this.lb_datapag.Location = new System.Drawing.Point(61, 445);
+            this.lb_datapag.Name = "lb_datapag";
+            this.lb_datapag.Size = new System.Drawing.Size(134, 17);
+            this.lb_datapag.TabIndex = 32;
+            this.lb_datapag.Text = "Data de Pagamento";
+            this.lb_datapag.Visible = false;
+            // 
             // frm_cadastrarCredito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -476,6 +478,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frm_cadastrarCredito";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_cadastrarCredito_Load);
@@ -513,5 +516,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bt_novo;
         private System.Windows.Forms.Button bt_salvar;
+        private System.Windows.Forms.Label lb_datapag;
     }
 }
