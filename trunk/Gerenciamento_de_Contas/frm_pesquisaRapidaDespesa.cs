@@ -55,9 +55,13 @@ namespace Gerenciamento_de_Contas
             {
                 this.contas_PagarTableAdapter.FillByPesquisaValor(contas_DBDataSet.Contas_Pagar, valor_tb);
             }
-            else if (tipo == "Situação")
+            else if (tipo == "Status")
             {
                 this.contas_PagarTableAdapter.FillByPesquisaSituacao(contas_DBDataSet.Contas_Pagar, valor_tb);
+            }
+            else if (tipo == "Data de Emissão")
+            {
+                this.contas_PagarTableAdapter.ScalarQueryPesquisarDataEmissao(valor_tb);
             }
         }
     }

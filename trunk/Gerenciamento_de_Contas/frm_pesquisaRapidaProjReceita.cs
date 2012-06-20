@@ -39,7 +39,6 @@ namespace Gerenciamento_de_Contas
             // TODO: This line of code loads data into the 'contas_DBDataSet.Projecoes_Receber' table. You can move, or remove it, as needed.
             this.projecoes_ReceberTableAdapter.Fill(this.contas_DBDataSet.Projecoes_Receber);
             Filtrar(tipo, valor);
-            this.reportViewer1.RefreshReport();
         }
 
         public void Filtrar(string tipo, string valor)

@@ -31,14 +31,24 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.Contas_DBDataSet = new Gerenciamento_de_Contas.Contas_DBDataSet();
             this.Contas_PagarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Contas_DBDataSet = new Gerenciamento_de_Contas.Contas_DBDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Contas_PagarTableAdapter = new Gerenciamento_de_Contas.Contas_DBDataSetTableAdapters.Contas_PagarTableAdapter();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.Contas_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Contas_PagarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Contas_DBDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // Contas_PagarBindingSource
+            // 
+            this.Contas_PagarBindingSource.DataMember = "Contas_Pagar";
+            this.Contas_PagarBindingSource.DataSource = this.Contas_DBDataSet;
+            // 
+            // Contas_DBDataSet
+            // 
+            this.Contas_DBDataSet.DataSetName = "Contas_DBDataSet";
+            this.Contas_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +61,6 @@
             this.reportViewer1.ShowToolBar = false;
             this.reportViewer1.Size = new System.Drawing.Size(350, 226);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // Contas_DBDataSet
-            // 
-            this.Contas_DBDataSet.DataSetName = "Contas_DBDataSet";
-            this.Contas_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Contas_PagarBindingSource
-            // 
-            this.Contas_PagarBindingSource.DataMember = "Contas_Pagar";
-            this.Contas_PagarBindingSource.DataSource = this.Contas_DBDataSet;
             // 
             // Contas_PagarTableAdapter
             // 
@@ -87,12 +87,13 @@
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "frm_graficoDespesas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frm_graficoDespesas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Contas_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Contas_PagarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Contas_DBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

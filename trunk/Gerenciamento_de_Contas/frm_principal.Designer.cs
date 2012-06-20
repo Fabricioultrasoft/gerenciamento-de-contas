@@ -38,11 +38,13 @@
             this.alterarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prioridadesDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contasaReceberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.prioridadesDeCobrançaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.projeçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.despesasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novaProjeçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -176,7 +178,8 @@
             this.cadastrarToolStripMenuItem,
             this.alterarToolStripMenuItem,
             this.excluirToolStripMenuItem,
-            this.consultarToolStripMenuItem});
+            this.consultarToolStripMenuItem,
+            this.prioridadesDePagamentoToolStripMenuItem});
             this.contasaPagarToolStripMenuItem.Name = "contasaPagarToolStripMenuItem";
             this.contasaPagarToolStripMenuItem.Size = new System.Drawing.Size(83, 21);
             this.contasaPagarToolStripMenuItem.Text = "Despesas";
@@ -185,7 +188,7 @@
             // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             this.cadastrarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
@@ -193,7 +196,7 @@
             // 
             this.alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
             this.alterarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
             this.alterarToolStripMenuItem.Text = "Alterar";
             this.alterarToolStripMenuItem.Click += new System.EventHandler(this.alterarToolStripMenuItem_Click);
             // 
@@ -201,7 +204,7 @@
             // 
             this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
             this.excluirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
             this.excluirToolStripMenuItem.Text = "Excluir";
             this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
             // 
@@ -209,9 +212,17 @@
             // 
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
             this.consultarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
             this.consultarToolStripMenuItem.Text = "Consultar";
             this.consultarToolStripMenuItem.Click += new System.EventHandler(this.consultarToolStripMenuItem_Click);
+            // 
+            // prioridadesDePagamentoToolStripMenuItem
+            // 
+            this.prioridadesDePagamentoToolStripMenuItem.Name = "prioridadesDePagamentoToolStripMenuItem";
+            this.prioridadesDePagamentoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.prioridadesDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(290, 22);
+            this.prioridadesDePagamentoToolStripMenuItem.Text = "Prioridades de Pagamento";
+            this.prioridadesDePagamentoToolStripMenuItem.Click += new System.EventHandler(this.prioridadesDePagamentoToolStripMenuItem_Click);
             // 
             // contasaReceberToolStripMenuItem
             // 
@@ -219,7 +230,8 @@
             this.cadastrarToolStripMenuItem1,
             this.alterarToolStripMenuItem1,
             this.excluirToolStripMenuItem1,
-            this.consultarToolStripMenuItem1});
+            this.consultarToolStripMenuItem1,
+            this.prioridadesDeCobrançaToolStripMenuItem});
             this.contasaReceberToolStripMenuItem.Name = "contasaReceberToolStripMenuItem";
             this.contasaReceberToolStripMenuItem.Size = new System.Drawing.Size(75, 21);
             this.contasaReceberToolStripMenuItem.Text = "Receitas";
@@ -228,7 +240,7 @@
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
             this.cadastrarToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(281, 22);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
@@ -236,7 +248,7 @@
             // 
             this.alterarToolStripMenuItem1.Name = "alterarToolStripMenuItem1";
             this.alterarToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
+            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(281, 22);
             this.alterarToolStripMenuItem1.Text = "Alterar";
             this.alterarToolStripMenuItem1.Click += new System.EventHandler(this.alterarToolStripMenuItem1_Click);
             // 
@@ -244,7 +256,7 @@
             // 
             this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
             this.excluirToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(281, 22);
             this.excluirToolStripMenuItem1.Text = "Excluir";
             this.excluirToolStripMenuItem1.Click += new System.EventHandler(this.excluirToolStripMenuItem1_Click);
             // 
@@ -252,9 +264,17 @@
             // 
             this.consultarToolStripMenuItem1.Name = "consultarToolStripMenuItem1";
             this.consultarToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(184, 22);
+            this.consultarToolStripMenuItem1.Size = new System.Drawing.Size(281, 22);
             this.consultarToolStripMenuItem1.Text = "Consultar";
             this.consultarToolStripMenuItem1.Click += new System.EventHandler(this.consultarToolStripMenuItem1_Click);
+            // 
+            // prioridadesDeCobrançaToolStripMenuItem
+            // 
+            this.prioridadesDeCobrançaToolStripMenuItem.Name = "prioridadesDeCobrançaToolStripMenuItem";
+            this.prioridadesDeCobrançaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+            this.prioridadesDeCobrançaToolStripMenuItem.Size = new System.Drawing.Size(281, 22);
+            this.prioridadesDeCobrançaToolStripMenuItem.Text = "Prioridades de Cobrança";
+            this.prioridadesDeCobrançaToolStripMenuItem.Click += new System.EventHandler(this.prioridadesDeCobrançaToolStripMenuItem_Click);
             // 
             // projeçõesToolStripMenuItem
             // 
@@ -277,16 +297,16 @@
             // novaProjeçãoToolStripMenuItem
             // 
             this.novaProjeçãoToolStripMenuItem.Name = "novaProjeçãoToolStripMenuItem";
-            this.novaProjeçãoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-            this.novaProjeçãoToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.novaProjeçãoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.novaProjeçãoToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.novaProjeçãoToolStripMenuItem.Text = "Nova Projeção";
             this.novaProjeçãoToolStripMenuItem.Click += new System.EventHandler(this.novaProjeçãoToolStripMenuItem_Click);
             // 
             // excluirProjeçãoToolStripMenuItem
             // 
             this.excluirProjeçãoToolStripMenuItem.Name = "excluirProjeçãoToolStripMenuItem";
-            this.excluirProjeçãoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.excluirProjeçãoToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.excluirProjeçãoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
+            this.excluirProjeçãoToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
             this.excluirProjeçãoToolStripMenuItem.Text = "Excluir Projeção";
             this.excluirProjeçãoToolStripMenuItem.Click += new System.EventHandler(this.excluirProjeçãoToolStripMenuItem_Click);
             // 
@@ -302,16 +322,16 @@
             // novaProjeçãoToolStripMenuItem1
             // 
             this.novaProjeçãoToolStripMenuItem1.Name = "novaProjeçãoToolStripMenuItem1";
-            this.novaProjeçãoToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-            this.novaProjeçãoToolStripMenuItem1.Size = new System.Drawing.Size(224, 22);
+            this.novaProjeçãoToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.novaProjeçãoToolStripMenuItem1.Size = new System.Drawing.Size(221, 22);
             this.novaProjeçãoToolStripMenuItem1.Text = "Nova Projeção";
             this.novaProjeçãoToolStripMenuItem1.Click += new System.EventHandler(this.novaProjeçãoToolStripMenuItem1_Click);
             // 
             // excluirProjeçãoToolStripMenuItem1
             // 
             this.excluirProjeçãoToolStripMenuItem1.Name = "excluirProjeçãoToolStripMenuItem1";
-            this.excluirProjeçãoToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
-            this.excluirProjeçãoToolStripMenuItem1.Size = new System.Drawing.Size(224, 22);
+            this.excluirProjeçãoToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.J)));
+            this.excluirProjeçãoToolStripMenuItem1.Size = new System.Drawing.Size(221, 22);
             this.excluirProjeçãoToolStripMenuItem1.Text = "Excluir Projeção";
             this.excluirProjeçãoToolStripMenuItem1.Click += new System.EventHandler(this.excluirProjeçãoToolStripMenuItem1_Click);
             // 
@@ -922,6 +942,7 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "Próximos Vencimentos";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label16
             // 
@@ -1225,5 +1246,7 @@
         private System.Windows.Forms.RadioButton rbt_projecoesreceitas;
         private System.Windows.Forms.RadioButton rbt_projecoesdespesas;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem prioridadesDePagamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prioridadesDeCobrançaToolStripMenuItem;
     }
 }

@@ -207,11 +207,29 @@
     <Compile Include="frm_principal.Designer.cs">
       <DependentUpon>frm_principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_prioridadesCobranca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_prioridadesCobranca.Designer.cs">
+      <DependentUpon>frm_prioridadesCobranca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_prioridadesPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_prioridadesPagamento.Designer.cs">
+      <DependentUpon>frm_prioridadesPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_proximosVencimentosPagar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_proximosVencimentosPagar.Designer.cs">
       <DependentUpon>frm_proximosVencimentosPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_proximosVencimentosReceber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_proximosVencimentosReceber.Designer.cs">
+      <DependentUpon>frm_proximosVencimentosReceber.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_receitasPagas.cs">
       <SubType>Form</SubType>
@@ -314,8 +332,17 @@
     <EmbeddedResource Include="frm_principal.resx">
       <DependentUpon>frm_principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_prioridadesCobranca.resx">
+      <DependentUpon>frm_prioridadesCobranca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_prioridadesPagamento.resx">
+      <DependentUpon>frm_prioridadesPagamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_proximosVencimentosPagar.resx">
       <DependentUpon>frm_proximosVencimentosPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_proximosVencimentosReceber.resx">
+      <DependentUpon>frm_proximosVencimentosReceber.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_receitasPagas.resx">
       <DependentUpon>frm_receitasPagas.cs</DependentUpon>

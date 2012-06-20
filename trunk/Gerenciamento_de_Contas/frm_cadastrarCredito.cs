@@ -69,7 +69,15 @@ namespace Gerenciamento_de_Contas
                 string situacao = situacaoComboBox.Text;
 
                 DadosContasReceber Dados = new DadosContasReceber();
-                Dados.Inserir(devedor, descricao, valor, data_emissao, data_vencimento, data_pagamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao);
+
+                if (situacaoComboBox.Text == "PAGO")
+                {
+                    Dados.Inserir(devedor, descricao, valor, data_emissao, data_vencimento, data_pagamento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao);
+                }
+                else
+                {
+                    Dados.InserirContaPendente(devedor, descricao, valor, data_emissao, data_vencimento, forma_pagamento, multa, juros, total_parcelas, valor_parcela, situacao);
+                }
             }
             catch (Exception ex)
             {
@@ -88,6 +96,20 @@ namespace Gerenciamento_de_Contas
             {
                 GravarDados();
                 MessageBox.Show("Cadastro realizado com sucesso!", "Cadastrar Crédito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void situacaoComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (situacaoComboBox.Text == "PAGO")
+            {
+                lb_datapag.Visible = true;
+                data_pagamentoDateTimePicker.Visible = true;
+            }
+            else
+            {
+                lb_datapag.Visible = false;
+                data_pagamentoDateTimePicker.Visible = false;
             }
         }
     }
