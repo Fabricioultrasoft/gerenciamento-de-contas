@@ -1,0 +1,1 @@
+Projeto elaborado por alunos da UFRPE correspondente à disciplina Fundamentos de Engenharia de Software.
